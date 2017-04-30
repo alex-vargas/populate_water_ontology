@@ -258,6 +258,10 @@
         <NamedIndividual IRI="#elast_p"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Simulation_software"/>
+        <NamedIndividual IRI="#gams"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Parameter"/>
         <NamedIndividual IRI="#gw_sustain_p"/>
     </ClassAssertion>
@@ -943,6 +947,11 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI"></Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#hasSwName"/>
+        <NamedIndividual IRI="#gams"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">The General Algebraic Modeling System (GAMS)</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#hasDataType"/>
         <NamedIndividual IRI="#gw_sustain_p"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">double</Literal>
@@ -1080,22 +1089,17 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#modelDateCreated"/>
         <NamedIndividual IRI="#mModel"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">Fri Sep 02 01:00:00 MDT 2016</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2016-09-02 01:00:00.0</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#modelDateModified"/>
         <NamedIndividual IRI="#mModel"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">Fri Sep 02 16:27:00 MDT 2016</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2016-09-02 16:27:00.0</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#null"/>
         <NamedIndividual IRI="#mModel"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Rio Grande Basin Model: Expandable Prototype. Contains essential elements of full Upper Rio Grande Basin Model.</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#null"/>
-        <NamedIndividual IRI="#mModel"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">The General Algebraic Modeling System (GAMS)</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasDataType"/>

@@ -1,4 +1,4 @@
-package utep.cybershare.populate_water_ontology;
+package utep.cybershare.populate_water_ontology.classes;
 
 import java.util.Map;
 

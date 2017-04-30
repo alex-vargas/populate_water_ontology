@@ -2,11 +2,18 @@ package utep.cybershare.populate_water_ontology;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.semanticweb.owlapi.model.OWLOntologyCreationException;
 
 import com.google.gson.Gson;
 import com.google.gson.stream.JsonReader;
+
+import utep.cybershare.populate_water_ontology.classes.Model;
+import utep.cybershare.populate_water_ontology.classes.Parameter;
+import utep.cybershare.populate_water_ontology.classes.Software;
+import utep.cybershare.populate_water_ontology.classes.mList;
 
 /**
  * Hello world!
@@ -19,49 +26,46 @@ public class App
     {
 		mOwl = new owlpopulation();
 		
-    	populateParameters();
-    	populateModel();
+    	populate("Parameter", "C:\\jsonParserCI\\paramTest.json");
+    	populate("Model", "C:\\jsonParserCI\\bucket-meta-v2.json");
+    	populate("Simulation_software", "C:\\jsonParserCI\\bucket-meta-v2.json");
 		String finalPathOWL = mOwl.saveToFile();
 		System.out.println("Ontology saved to: " + finalPathOWL);
 
     }
 
-	private static void populateModel() {
+	private static void populate(String className, String filename) {
         Gson g = new Gson();
-        String filename = "C:\\jsonParserCI\\bucket-meta-v2.json";
+        List<Object> mListObjects = new ArrayList<Object>();
         
         JsonReader reader;
 		try {
 			reader = new JsonReader(new FileReader(filename));
-			Model[] result = g.fromJson(reader, Model[].class);
-			if(result.length > 0)
+			if(className.equals("Parameter")){
+				mList result = g.fromJson(reader, mList.class);
+				for(Parameter param : result.getDescriptor().values())
+					mListObjects.add(param);
+			}else if(className.equals("Model")){
+				Model[] result = g.fromJson(reader, Model[].class);
 				for(Model model : result)
-					mOwl.addIndividualToOwl(model, "Model");
+					mListObjects.add(model);
+			}else if(className.equals("Simulation_software")){
+				Software[] result = g.fromJson(reader, Software[].class);
+				for(Software model : result)
+					mListObjects.add(model);
+			}
+			if(mListObjects.size() > 0)
+				for(Object mObject : mListObjects)
+					mOwl.addIndividualToOwl(mObject, className);
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		} catch (java.lang.IllegalStateException e){
 			e.printStackTrace();
 		}
 		finally{
-			System.out.println("end of populating model");
+			System.out.println("end of populating " + className);
 		}
 	}
-
-	private static void populateParameters() {
-        Gson g = new Gson();
         String filename = "C:\\jsonParserCI\\paramTest.json";
-        
-        JsonReader reader;
-		try {
-			reader = new JsonReader(new FileReader(filename));
-			mList result = g.fromJson(reader, mList.class);
-			if(result.getDescriptor().size() > 0)
-				for(Parameter param : result.getDescriptor().values())
-					mOwl.addIndividualToOwl(param, "Parameter");
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
-		} finally{
-			System.out.println("end of populating params");
-		}
-	}
+      
 }

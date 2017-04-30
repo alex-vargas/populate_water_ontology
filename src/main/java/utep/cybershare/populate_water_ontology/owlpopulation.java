@@ -23,6 +23,11 @@ import org.semanticweb.owlapi.util.DefaultPrefixManager;
 import org.semanticweb.owlapi.vocab.OWL2Datatype;
 import org.semanticweb.owlapi.vocab.OWLRDFVocabulary;
 
+import utep.cybershare.populate_water_ontology.classes.Parameter;
+import utep.cybershare.populate_water_ontology.mapping.ModelMapping;
+import utep.cybershare.populate_water_ontology.mapping.ParamMapping;
+import utep.cybershare.populate_water_ontology.mapping.SoftwareMapping;
+
 public class owlpopulation {
 	String ontFile;
 	String ontSchemaPath;
@@ -51,7 +56,9 @@ public class owlpopulation {
 			mIndividual = mIndividual = mFactory.getOWLNamedIndividual(":" + ((Parameter) mObj).getParamName(), prefixManager);
 		else if(classToMap.equals("Model"))
 			mIndividual = mIndividual = mFactory.getOWLNamedIndividual(":" + "mModel", prefixManager);
-//			mIndividual = mIndividual = mFactory.getOWLNamedIndividual(":" + ((Model) mObj).getModelName(), prefixManager);
+		else if(classToMap.equals("Simulation_software"))
+			mIndividual = mIndividual = mFactory.getOWLNamedIndividual(":" + "gams", prefixManager);
+		
 		addIndAxiom(mIndividual, classToMap);
 		addDataProperty(mObj, mIndividual, classToMap);
 	}
@@ -60,23 +67,28 @@ public class owlpopulation {
 		Class<?> clazz = mObj.getClass();
 		ParamMapping paramMap = null;
 		ModelMapping modelMap = null;
+		SoftwareMapping softwareMap = null;
 		
 		if(classToMap.equals("Parameter"))
 			paramMap = new ParamMapping();
 		else if(classToMap.equals("Model"))
 			modelMap = new ModelMapping();
+		else if(classToMap.equals("Simulation_software"))
+			softwareMap = new SoftwareMapping();
 
 		for(Field field : clazz.getDeclaredFields()) {
 			field.setAccessible(true);
 
 			try {
 				if((paramMap != null && paramMap.getParamMap().containsKey(field.getName())) || 
-						(modelMap != null)){
+						(modelMap != null)|| (softwareMap != null)){
 					OWLDataProperty mDataProperty = null;
 					if(classToMap.equals("Parameter"))
 						mDataProperty = mFactory.getOWLDataProperty(":" + paramMap.getParamMap().get(field.getName()), prefixManager);
 					else if(classToMap.equals("Model"))
-							mDataProperty = mFactory.getOWLDataProperty(":" + modelMap.getModelMap().get(field.getName()), prefixManager);
+						mDataProperty = mFactory.getOWLDataProperty(":" + modelMap.getModelMap().get(field.getName()), prefixManager);
+					else if(classToMap.equals("Simulation_software"))
+						mDataProperty = mFactory.getOWLDataProperty(":" + softwareMap.getSoftwareMap().get(field.getName()), prefixManager);
 					OWLAxiom axiom = null;
 					
 					OWLLiteral dataLiteral = null;
@@ -92,6 +104,8 @@ public class owlpopulation {
 						dataLiteral = mFactory.getOWLLiteral(field.get(mObj).toString(),OWL2Datatype.XSD_ANY_URI);
 					else if(field.getType().getSimpleName().toString().equals("Date"))
 						dataLiteral = mFactory.getOWLLiteral(field.get(mObj).toString(),OWL2Datatype.XSD_DATE_TIME);
+					else if(field.getType().getSimpleName().toString().equals("Timestamp"))
+						dataLiteral = mFactory.getOWLLiteral(field.get(mObj).toString(),OWL2Datatype.XSD_DATE_TIME_STAMP);
 
 					axiom = mFactory.getOWLDataPropertyAssertionAxiom(mDataProperty, mIndividual, dataLiteral);
 					mManager.applyChange(new AddAxiom(mOWLFile, axiom));
