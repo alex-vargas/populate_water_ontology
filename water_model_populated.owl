@@ -214,6 +214,10 @@
         <Class IRI="-23#Model"/>
     </DisjointClasses>
     <ClassAssertion>
+        <Class IRI="#Person"/>
+        <NamedIndividual IRI="#Alex_Mayer"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Parameter"/>
         <NamedIndividual IRI="#B1_area_vol_p"/>
     </ClassAssertion>
@@ -232,6 +236,10 @@
     <ClassAssertion>
         <Class IRI="#Parameter"/>
         <NamedIndividual IRI="#Evap_rate_p"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Person"/>
+        <NamedIndividual IRI="#Frank_Ward"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Parameter"/>
@@ -341,6 +349,16 @@
         <Class IRI="#Parameter"/>
         <NamedIndividual IRI="#zmax_p"/>
     </ClassAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasEmail"/>
+        <NamedIndividual IRI="#Alex_Mayer"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">asmayer@mtu.edu</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasName"/>
+        <NamedIndividual IRI="#Alex_Mayer"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Alex Mayer</Literal>
+    </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasDataType"/>
         <NamedIndividual IRI="#B1_area_vol_p"/>
@@ -615,6 +633,16 @@
         <DataProperty IRI="#hasValue"/>
         <NamedIndividual IRI="#Evap_rate_p"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">10</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasEmail"/>
+        <NamedIndividual IRI="#Frank_Ward"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">fward@nmsu.edu</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasName"/>
+        <NamedIndividual IRI="#Frank_Ward"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Frank Ward</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasDataType"/>

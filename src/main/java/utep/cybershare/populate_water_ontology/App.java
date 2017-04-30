@@ -12,6 +12,8 @@ import com.google.gson.stream.JsonReader;
 
 import utep.cybershare.populate_water_ontology.classes.Model;
 import utep.cybershare.populate_water_ontology.classes.Parameter;
+import utep.cybershare.populate_water_ontology.classes.Person;
+import utep.cybershare.populate_water_ontology.classes.PersonList;
 import utep.cybershare.populate_water_ontology.classes.Software;
 import utep.cybershare.populate_water_ontology.classes.mList;
 
@@ -29,6 +31,7 @@ public class App
     	populate("Parameter", "C:\\jsonParserCI\\paramTest.json");
     	populate("Model", "C:\\jsonParserCI\\bucket-meta-v2.json");
     	populate("Simulation_software", "C:\\jsonParserCI\\bucket-meta-v2.json");
+    	populate("Person", "C:\\jsonParserCI\\bucket-meta-v2.json");
 		String finalPathOWL = mOwl.saveToFile();
 		System.out.println("Ontology saved to: " + finalPathOWL);
 
@@ -51,8 +54,14 @@ public class App
 					mListObjects.add(model);
 			}else if(className.equals("Simulation_software")){
 				Software[] result = g.fromJson(reader, Software[].class);
-				for(Software model : result)
-					mListObjects.add(model);
+				for(Software sw : result)
+					mListObjects.add(sw);
+			}else if(className.equals("Person")){
+				PersonList[] result = g.fromJson(reader, PersonList[].class);
+				for(PersonList personArray : result){
+					for(Person person : personArray.getCreators())
+						mListObjects.add(person);
+				}
 			}
 			if(mListObjects.size() > 0)
 				for(Object mObject : mListObjects)
