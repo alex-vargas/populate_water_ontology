@@ -246,6 +246,14 @@
         <NamedIndividual IRI="#LANDRHS_p"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Institution"/>
+        <NamedIndividual IRI="#Michigan_Tech_University"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Institution"/>
+        <NamedIndividual IRI="#New_Mexico_State_University"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Parameter"/>
         <NamedIndividual IRI="#Price_p"/>
     </ClassAssertion>
@@ -698,6 +706,56 @@
         <DataProperty IRI="#hasValue"/>
         <NamedIndividual IRI="#LANDRHS_p"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI"></Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasCity"/>
+        <NamedIndividual IRI="#Michigan_Tech_University"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Houghton</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasCountry"/>
+        <NamedIndividual IRI="#Michigan_Tech_University"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">United States of America</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDepartment"/>
+        <NamedIndividual IRI="#Michigan_Tech_University"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Department of Civil &amp; Environmental Engineering</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasInstitutionName"/>
+        <NamedIndividual IRI="#Michigan_Tech_University"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Michigan Tech University</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasState"/>
+        <NamedIndividual IRI="#Michigan_Tech_University"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Michigan</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasCity"/>
+        <NamedIndividual IRI="#New_Mexico_State_University"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Las Cruces</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasCountry"/>
+        <NamedIndividual IRI="#New_Mexico_State_University"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">United States of America</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDepartment"/>
+        <NamedIndividual IRI="#New_Mexico_State_University"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Dept of Agr Economics/Agr Business</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasInstitutionName"/>
+        <NamedIndividual IRI="#New_Mexico_State_University"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">New Mexico State University</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasState"/>
+        <NamedIndividual IRI="#New_Mexico_State_University"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">New Mexico</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasDataType"/>

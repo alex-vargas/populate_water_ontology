@@ -23,8 +23,10 @@ import org.semanticweb.owlapi.util.DefaultPrefixManager;
 import org.semanticweb.owlapi.vocab.OWL2Datatype;
 import org.semanticweb.owlapi.vocab.OWLRDFVocabulary;
 
+import utep.cybershare.populate_water_ontology.classes.Institution;
 import utep.cybershare.populate_water_ontology.classes.Parameter;
 import utep.cybershare.populate_water_ontology.classes.Person;
+import utep.cybershare.populate_water_ontology.mapping.InstitutionMapping;
 import utep.cybershare.populate_water_ontology.mapping.ModelMapping;
 import utep.cybershare.populate_water_ontology.mapping.ParamMapping;
 import utep.cybershare.populate_water_ontology.mapping.PersonMapping;
@@ -62,6 +64,8 @@ public class owlpopulation {
 			mIndividual = mIndividual = mFactory.getOWLNamedIndividual(":" + "gams", prefixManager);
 		else if(classToMap.equals("Person"))
 			mIndividual = mIndividual = mFactory.getOWLNamedIndividual(":" + ((Person) mObj).getName().replaceAll(" ", "_"), prefixManager);
+		else if(classToMap.equals("Institution"))
+			mIndividual = mIndividual = mFactory.getOWLNamedIndividual(":" + ((Institution) mObj).getOrganization().replaceAll(" ", "_"), prefixManager);
 		
 		addIndAxiom(mIndividual, classToMap);
 		addDataProperty(mObj, mIndividual, classToMap);
@@ -73,6 +77,7 @@ public class owlpopulation {
 		ModelMapping modelMap = null;
 		SoftwareMapping softwareMap = null;
 		PersonMapping personMap = null;
+		InstitutionMapping institutionMap = null;
 		
 		if(classToMap.equals("Parameter"))
 			paramMap = new ParamMapping();
@@ -82,13 +87,15 @@ public class owlpopulation {
 			softwareMap = new SoftwareMapping();
 		else if(classToMap.equals("Person"))
 			personMap = new PersonMapping();
+		else if(classToMap.equals("Institution"))
+			institutionMap = new InstitutionMapping();
 
 		for(Field field : clazz.getDeclaredFields()) {
 			field.setAccessible(true);
 
 			try {
 				if((paramMap != null && paramMap.getParamMap().containsKey(field.getName())) || 
-						(modelMap != null) || (softwareMap != null) || (personMap != null)){
+						(modelMap != null) || (softwareMap != null) || (personMap != null) || (institutionMap != null)){
 					OWLDataProperty mDataProperty = null;
 					if(classToMap.equals("Parameter"))
 						mDataProperty = mFactory.getOWLDataProperty(":" + paramMap.getParamMap().get(field.getName()), prefixManager);
@@ -98,6 +105,8 @@ public class owlpopulation {
 						mDataProperty = mFactory.getOWLDataProperty(":" + softwareMap.getSoftwareMap().get(field.getName()), prefixManager);
 					else if(classToMap.equals("Person"))
 						mDataProperty = mFactory.getOWLDataProperty(":" + personMap.getPersonMap().get(field.getName()), prefixManager);
+					else if(classToMap.equals("Institution"))
+						mDataProperty = mFactory.getOWLDataProperty(":" + institutionMap.getPersonMap().get(field.getName()), prefixManager);
 					OWLAxiom axiom = null;
 					
 					OWLLiteral dataLiteral = null;

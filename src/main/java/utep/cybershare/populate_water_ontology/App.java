@@ -10,6 +10,8 @@ import org.semanticweb.owlapi.model.OWLOntologyCreationException;
 import com.google.gson.Gson;
 import com.google.gson.stream.JsonReader;
 
+import utep.cybershare.populate_water_ontology.classes.Institution;
+import utep.cybershare.populate_water_ontology.classes.InstitutionList;
 import utep.cybershare.populate_water_ontology.classes.Model;
 import utep.cybershare.populate_water_ontology.classes.Parameter;
 import utep.cybershare.populate_water_ontology.classes.Person;
@@ -32,6 +34,7 @@ public class App
     	populate("Model", "C:\\jsonParserCI\\bucket-meta-v2.json");
     	populate("Simulation_software", "C:\\jsonParserCI\\bucket-meta-v2.json");
     	populate("Person", "C:\\jsonParserCI\\bucket-meta-v2.json");
+    	populate("Institution", "C:\\jsonParserCI\\bucket-meta-v2.json");
 		String finalPathOWL = mOwl.saveToFile();
 		System.out.println("Ontology saved to: " + finalPathOWL);
 
@@ -61,6 +64,12 @@ public class App
 				for(PersonList personArray : result){
 					for(Person person : personArray.getCreators())
 						mListObjects.add(person);
+				}
+			}else if(className.equals("Institution")){
+				InstitutionList[] result = g.fromJson(reader, InstitutionList[].class);
+				for(InstitutionList institutionArray : result){
+					for(Institution institution : institutionArray.getCreators())
+						mListObjects.add(institution);
 				}
 			}
 			if(mListObjects.size() > 0)
