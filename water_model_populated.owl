@@ -1,0 +1,2604 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/aleja/ontologies/2017/3/water_model"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/aleja/ontologies/2017/3/water_model">
+    <Prefix name="" IRI="http://www.semanticweb.org/aleja/ontologies/2017/3/water_model"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="http://semanticscience.org/resource/SIO_000510"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Input"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Institution"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Output"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Parameter"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Person"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Simulation_software"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Variable"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="-23#Model"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasInput"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasModelCreator"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasOutput"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isMemberOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isSimulatedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#runsA"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasCity"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasCountry"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasDataType"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasDefaultSource"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasDefaultValue"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasDefinitionType"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasDepartment"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasDescription"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasEmail"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasInstitutionName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasMaxValue"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasMinValue"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasModelID"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasModelLicense"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasModelName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasModelSponsor"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasModelVersion"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasParamName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasState"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasStructDimension"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasStructType"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasSwName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasSwVersion"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasUnit"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasValue"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#modelDateCreated"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#modelDateModified"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#Parameter"/>
+        <Class IRI="#Input"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Variable"/>
+        <Class IRI="#Output"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="-23#Model"/>
+        <Class IRI="http://semanticscience.org/resource/SIO_000510"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#Input"/>
+        <Class IRI="#Institution"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Input"/>
+        <Class IRI="#Output"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Input"/>
+        <Class IRI="#Person"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Input"/>
+        <Class IRI="#Simulation_software"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Input"/>
+        <Class IRI="-23#Model"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Institution"/>
+        <Class IRI="#Output"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Institution"/>
+        <Class IRI="#Person"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Institution"/>
+        <Class IRI="#Simulation_software"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Institution"/>
+        <Class IRI="-23#Model"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Output"/>
+        <Class IRI="#Person"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Output"/>
+        <Class IRI="#Simulation_software"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Output"/>
+        <Class IRI="-23#Model"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Person"/>
+        <Class IRI="#Simulation_software"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Person"/>
+        <Class IRI="-23#Model"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Simulation_software"/>
+        <Class IRI="-23#Model"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class IRI="#Parameter"/>
+        <NamedIndividual IRI="#B1_area_vol_p"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Parameter"/>
+        <NamedIndividual IRI="#B2_area_volsq_p"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Parameter"/>
+        <NamedIndividual IRI="#BC_p"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Parameter"/>
+        <NamedIndividual IRI="#Cost_p"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Parameter"/>
+        <NamedIndividual IRI="#Evap_rate_p"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Parameter"/>
+        <NamedIndividual IRI="#LANDRHS_p"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Parameter"/>
+        <NamedIndividual IRI="#Price_p"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Parameter"/>
+        <NamedIndividual IRI="#Yield_p"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Parameter"/>
+        <NamedIndividual IRI="#ag_av_gw_cost_p"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Parameter"/>
+        <NamedIndividual IRI="#ag_gw_pump_capacity_p"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Parameter"/>
+        <NamedIndividual IRI="#elast_p"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Parameter"/>
+        <NamedIndividual IRI="#gw_sustain_p"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Parameter"/>
+        <NamedIndividual IRI="#land_p"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Model"/>
+        <NamedIndividual IRI="#mModel"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Parameter"/>
+        <NamedIndividual IRI="#pop0_p"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Parameter"/>
+        <NamedIndividual IRI="#q0_p"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Parameter"/>
+        <NamedIndividual IRI="#qmax_p"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Parameter"/>
+        <NamedIndividual IRI="#rho_pop_p"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Parameter"/>
+        <NamedIndividual IRI="#source_p"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Parameter"/>
+        <NamedIndividual IRI="#sw_sustain_p"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Parameter"/>
+        <NamedIndividual IRI="#tx_proj_op_p"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Parameter"/>
+        <NamedIndividual IRI="#urb_av_cost0_p"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Parameter"/>
+        <NamedIndividual IRI="#urb_av_gw_cost0_p"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Parameter"/>
+        <NamedIndividual IRI="#urb_cost_grow_p"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Parameter"/>
+        <NamedIndividual IRI="#urb_gw_cost_grow_p"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Parameter"/>
+        <NamedIndividual IRI="#urb_gw_pump_capacity_p"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Parameter"/>
+        <NamedIndividual IRI="#urb_price_p"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Parameter"/>
+        <NamedIndividual IRI="#urb_use_p"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Parameter"/>
+        <NamedIndividual IRI="#us_mx_1906_p"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Parameter"/>
+        <NamedIndividual IRI="#z0_p"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Parameter"/>
+        <NamedIndividual IRI="#zmax_p"/>
+    </ClassAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDataType"/>
+        <NamedIndividual IRI="#B1_area_vol_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">double</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDefaultSource"/>
+        <NamedIndividual IRI="#B1_area_vol_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string"></Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDefaultValue"/>
+        <NamedIndividual IRI="#B1_area_vol_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">0.015</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDefinitionType"/>
+        <NamedIndividual IRI="#B1_area_vol_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">static</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasMaxValue"/>
+        <NamedIndividual IRI="#B1_area_vol_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">1.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasMinValue"/>
+        <NamedIndividual IRI="#B1_area_vol_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasParamName"/>
+        <NamedIndividual IRI="#B1_area_vol_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">B1_area_vol_p</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasStructDimension"/>
+        <NamedIndividual IRI="#B1_area_vol_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasStructType"/>
+        <NamedIndividual IRI="#B1_area_vol_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">scalar</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasUnit"/>
+        <NamedIndividual IRI="#B1_area_vol_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">acres/1000 acre-feet</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasValue"/>
+        <NamedIndividual IRI="#B1_area_vol_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">0.015</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDataType"/>
+        <NamedIndividual IRI="#B2_area_volsq_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">double</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDefaultSource"/>
+        <NamedIndividual IRI="#B2_area_volsq_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string"></Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDefaultValue"/>
+        <NamedIndividual IRI="#B2_area_volsq_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">0.00</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDefinitionType"/>
+        <NamedIndividual IRI="#B2_area_volsq_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">static</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasMaxValue"/>
+        <NamedIndividual IRI="#B2_area_volsq_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">1.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasMinValue"/>
+        <NamedIndividual IRI="#B2_area_volsq_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasParamName"/>
+        <NamedIndividual IRI="#B2_area_volsq_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">B2_area_volsq_p</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasStructDimension"/>
+        <NamedIndividual IRI="#B2_area_volsq_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasStructType"/>
+        <NamedIndividual IRI="#B2_area_volsq_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">scalar</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasUnit"/>
+        <NamedIndividual IRI="#B2_area_volsq_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">acres/1000 acre-feet2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasValue"/>
+        <NamedIndividual IRI="#B2_area_volsq_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">0.00</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDataType"/>
+        <NamedIndividual IRI="#BC_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">double</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDefaultSource"/>
+        <NamedIndividual IRI="#BC_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string"></Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDefaultValue"/>
+        <NamedIndividual IRI="#BC_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">0.80</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDefinitionType"/>
+        <NamedIndividual IRI="#BC_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">static</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasMaxValue"/>
+        <NamedIndividual IRI="#BC_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">1.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasMinValue"/>
+        <NamedIndividual IRI="#BC_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasParamName"/>
+        <NamedIndividual IRI="#BC_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">BC_p</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasStructDimension"/>
+        <NamedIndividual IRI="#BC_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasStructType"/>
+        <NamedIndividual IRI="#BC_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">scalar</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasUnit"/>
+        <NamedIndividual IRI="#BC_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Percentage</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasValue"/>
+        <NamedIndividual IRI="#BC_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">0.80</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDataType"/>
+        <NamedIndividual IRI="#Cost_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">double</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDefaultSource"/>
+        <NamedIndividual IRI="#Cost_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">NMSU extension budgets</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDefaultValue"/>
+        <NamedIndividual IRI="#Cost_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI"></Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDefinitionType"/>
+        <NamedIndividual IRI="#Cost_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">scenario</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasMaxValue"/>
+        <NamedIndividual IRI="#Cost_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">10000.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasMinValue"/>
+        <NamedIndividual IRI="#Cost_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasParamName"/>
+        <NamedIndividual IRI="#Cost_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Cost_p</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasStructDimension"/>
+        <NamedIndividual IRI="#Cost_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">3</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasStructType"/>
+        <NamedIndividual IRI="#Cost_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">table</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasUnit"/>
+        <NamedIndividual IRI="#Cost_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">$USD/acre</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasValue"/>
+        <NamedIndividual IRI="#Cost_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI"></Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDataType"/>
+        <NamedIndividual IRI="#Evap_rate_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">integer</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDefaultSource"/>
+        <NamedIndividual IRI="#Evap_rate_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string"></Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDefaultValue"/>
+        <NamedIndividual IRI="#Evap_rate_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">10</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDefinitionType"/>
+        <NamedIndividual IRI="#Evap_rate_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">static</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasMaxValue"/>
+        <NamedIndividual IRI="#Evap_rate_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">20.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasMinValue"/>
+        <NamedIndividual IRI="#Evap_rate_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasParamName"/>
+        <NamedIndividual IRI="#Evap_rate_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Evap_rate_p</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasStructDimension"/>
+        <NamedIndividual IRI="#Evap_rate_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasStructType"/>
+        <NamedIndividual IRI="#Evap_rate_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">scalar</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasUnit"/>
+        <NamedIndividual IRI="#Evap_rate_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">feet/acre</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasValue"/>
+        <NamedIndividual IRI="#Evap_rate_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">10</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDataType"/>
+        <NamedIndividual IRI="#LANDRHS_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">integer</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDefaultSource"/>
+        <NamedIndividual IRI="#LANDRHS_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string"></Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDefaultValue"/>
+        <NamedIndividual IRI="#LANDRHS_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI"></Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDefinitionType"/>
+        <NamedIndividual IRI="#LANDRHS_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">scenario</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasMaxValue"/>
+        <NamedIndividual IRI="#LANDRHS_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">100.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasMinValue"/>
+        <NamedIndividual IRI="#LANDRHS_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasParamName"/>
+        <NamedIndividual IRI="#LANDRHS_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">LANDRHS_p</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasStructDimension"/>
+        <NamedIndividual IRI="#LANDRHS_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasStructType"/>
+        <NamedIndividual IRI="#LANDRHS_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">table</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasUnit"/>
+        <NamedIndividual IRI="#LANDRHS_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">1000 acres</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasValue"/>
+        <NamedIndividual IRI="#LANDRHS_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI"></Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDataType"/>
+        <NamedIndividual IRI="#Price_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">double</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDefaultSource"/>
+        <NamedIndividual IRI="#Price_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">NMSU extension budgets</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDefaultValue"/>
+        <NamedIndividual IRI="#Price_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI"></Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDefinitionType"/>
+        <NamedIndividual IRI="#Price_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">scenario</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasMaxValue"/>
+        <NamedIndividual IRI="#Price_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">10000.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasMinValue"/>
+        <NamedIndividual IRI="#Price_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasParamName"/>
+        <NamedIndividual IRI="#Price_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Price_p</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasStructDimension"/>
+        <NamedIndividual IRI="#Price_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasStructType"/>
+        <NamedIndividual IRI="#Price_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">table</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasUnit"/>
+        <NamedIndividual IRI="#Price_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">$USD/ton</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasValue"/>
+        <NamedIndividual IRI="#Price_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI"></Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDataType"/>
+        <NamedIndividual IRI="#Yield_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">double</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDefaultSource"/>
+        <NamedIndividual IRI="#Yield_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">NMSU Extension Budgets</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDefaultValue"/>
+        <NamedIndividual IRI="#Yield_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI"></Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDefinitionType"/>
+        <NamedIndividual IRI="#Yield_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">scenario</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasMaxValue"/>
+        <NamedIndividual IRI="#Yield_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">100.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasMinValue"/>
+        <NamedIndividual IRI="#Yield_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasParamName"/>
+        <NamedIndividual IRI="#Yield_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Yield_p</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasStructDimension"/>
+        <NamedIndividual IRI="#Yield_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">3</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasStructType"/>
+        <NamedIndividual IRI="#Yield_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">table</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasUnit"/>
+        <NamedIndividual IRI="#Yield_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">tons/acre</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasValue"/>
+        <NamedIndividual IRI="#Yield_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI"></Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDataType"/>
+        <NamedIndividual IRI="#ag_av_gw_cost_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">double</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDefaultSource"/>
+        <NamedIndividual IRI="#ag_av_gw_cost_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Educated Guess</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDefaultValue"/>
+        <NamedIndividual IRI="#ag_av_gw_cost_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">100</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDefinitionType"/>
+        <NamedIndividual IRI="#ag_av_gw_cost_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">scenario</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasMaxValue"/>
+        <NamedIndividual IRI="#ag_av_gw_cost_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">100.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasMinValue"/>
+        <NamedIndividual IRI="#ag_av_gw_cost_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasParamName"/>
+        <NamedIndividual IRI="#ag_av_gw_cost_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">ag_av_gw_cost_p</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasStructDimension"/>
+        <NamedIndividual IRI="#ag_av_gw_cost_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasStructType"/>
+        <NamedIndividual IRI="#ag_av_gw_cost_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">scalar</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasUnit"/>
+        <NamedIndividual IRI="#ag_av_gw_cost_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">$USD/acre-ft</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasValue"/>
+        <NamedIndividual IRI="#ag_av_gw_cost_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">100</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDataType"/>
+        <NamedIndividual IRI="#ag_gw_pump_capacity_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">double</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDefaultSource"/>
+        <NamedIndividual IRI="#ag_gw_pump_capacity_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Educated Guess</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDefaultValue"/>
+        <NamedIndividual IRI="#ag_gw_pump_capacity_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDefinitionType"/>
+        <NamedIndividual IRI="#ag_gw_pump_capacity_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">scenario</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasMaxValue"/>
+        <NamedIndividual IRI="#ag_gw_pump_capacity_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">10.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasMinValue"/>
+        <NamedIndividual IRI="#ag_gw_pump_capacity_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasParamName"/>
+        <NamedIndividual IRI="#ag_gw_pump_capacity_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">ag_gw_pump_capacity_p</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasStructDimension"/>
+        <NamedIndividual IRI="#ag_gw_pump_capacity_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasStructType"/>
+        <NamedIndividual IRI="#ag_gw_pump_capacity_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">scalar</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasUnit"/>
+        <NamedIndividual IRI="#ag_gw_pump_capacity_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">n/a</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasValue"/>
+        <NamedIndividual IRI="#ag_gw_pump_capacity_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDataType"/>
+        <NamedIndividual IRI="#elast_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">double</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDefaultSource"/>
+        <NamedIndividual IRI="#elast_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">El Paso water study (fullerton): http://www.waterrf.org/resources/Lists/ProjectPapers/Attachments/61/4501_ProjectPaper.pdf</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDefaultValue"/>
+        <NamedIndividual IRI="#elast_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI"></Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDefinitionType"/>
+        <NamedIndividual IRI="#elast_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">scenario</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasMaxValue"/>
+        <NamedIndividual IRI="#elast_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">1.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasMinValue"/>
+        <NamedIndividual IRI="#elast_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">-1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasParamName"/>
+        <NamedIndividual IRI="#elast_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">elast_p</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasStructDimension"/>
+        <NamedIndividual IRI="#elast_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasStructType"/>
+        <NamedIndividual IRI="#elast_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">table</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasUnit"/>
+        <NamedIndividual IRI="#elast_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">n/a</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasValue"/>
+        <NamedIndividual IRI="#elast_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI"></Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDataType"/>
+        <NamedIndividual IRI="#gw_sustain_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">double</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDefaultSource"/>
+        <NamedIndividual IRI="#gw_sustain_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string"></Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDefaultValue"/>
+        <NamedIndividual IRI="#gw_sustain_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">0.95</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDefinitionType"/>
+        <NamedIndividual IRI="#gw_sustain_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">scenario</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasMaxValue"/>
+        <NamedIndividual IRI="#gw_sustain_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">1.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasMinValue"/>
+        <NamedIndividual IRI="#gw_sustain_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasParamName"/>
+        <NamedIndividual IRI="#gw_sustain_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">gw_sustain_p</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasStructDimension"/>
+        <NamedIndividual IRI="#gw_sustain_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasStructType"/>
+        <NamedIndividual IRI="#gw_sustain_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">scalar</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasUnit"/>
+        <NamedIndividual IRI="#gw_sustain_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Percentage</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasValue"/>
+        <NamedIndividual IRI="#gw_sustain_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">0.95</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDataType"/>
+        <NamedIndividual IRI="#land_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">double</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDefaultSource"/>
+        <NamedIndividual IRI="#land_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">NMSU extension budgets</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDefaultValue"/>
+        <NamedIndividual IRI="#land_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI"></Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDefinitionType"/>
+        <NamedIndividual IRI="#land_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">scenario</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasMaxValue"/>
+        <NamedIndividual IRI="#land_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">100.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasMinValue"/>
+        <NamedIndividual IRI="#land_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasParamName"/>
+        <NamedIndividual IRI="#land_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">land_p</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasStructDimension"/>
+        <NamedIndividual IRI="#land_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">3</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasStructType"/>
+        <NamedIndividual IRI="#land_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">table</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasUnit"/>
+        <NamedIndividual IRI="#land_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">1000 acres</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasValue"/>
+        <NamedIndividual IRI="#land_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI"></Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasModelID"/>
+        <NamedIndividual IRI="#mModel"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasModelLicense"/>
+        <NamedIndividual IRI="#mModel"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Creative Commons Version 4.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasModelName"/>
+        <NamedIndividual IRI="#mModel"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">RIO GRANDE BASIN HYDROECONOMIC PROTOTYPE</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasModelSponsor"/>
+        <NamedIndividual IRI="#mModel"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">USDA NIFA 5 year grant beginning March 2015</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasModelVersion"/>
+        <NamedIndividual IRI="#mModel"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">2.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#modelDateCreated"/>
+        <NamedIndividual IRI="#mModel"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">Fri Sep 02 01:00:00 MDT 2016</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#modelDateModified"/>
+        <NamedIndividual IRI="#mModel"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">Fri Sep 02 16:27:00 MDT 2016</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#null"/>
+        <NamedIndividual IRI="#mModel"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Rio Grande Basin Model: Expandable Prototype. Contains essential elements of full Upper Rio Grande Basin Model.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#null"/>
+        <NamedIndividual IRI="#mModel"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">The General Algebraic Modeling System (GAMS)</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDataType"/>
+        <NamedIndividual IRI="#pop0_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">double</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDefaultSource"/>
+        <NamedIndividual IRI="#pop0_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Base year (2012) - http://www.epwu.org/whatsnew/pdf/Survey.pdf and http://www.abqjournal.com/479613/news/glitch-causes-billing-issue-for-1800-las-cruces-utility-customers.html</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDefaultValue"/>
+        <NamedIndividual IRI="#pop0_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI"></Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDefinitionType"/>
+        <NamedIndividual IRI="#pop0_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">user</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasMaxValue"/>
+        <NamedIndividual IRI="#pop0_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">500.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasMinValue"/>
+        <NamedIndividual IRI="#pop0_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasParamName"/>
+        <NamedIndividual IRI="#pop0_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">pop0_p</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasStructDimension"/>
+        <NamedIndividual IRI="#pop0_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasStructType"/>
+        <NamedIndividual IRI="#pop0_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">table</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasUnit"/>
+        <NamedIndividual IRI="#pop0_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">1000s</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasValue"/>
+        <NamedIndividual IRI="#pop0_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI"></Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDataType"/>
+        <NamedIndividual IRI="#q0_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">integer</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDefaultSource"/>
+        <NamedIndividual IRI="#q0_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string"></Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDefaultValue"/>
+        <NamedIndividual IRI="#q0_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI"></Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDefinitionType"/>
+        <NamedIndividual IRI="#q0_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">static</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasMaxValue"/>
+        <NamedIndividual IRI="#q0_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">70000.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasMinValue"/>
+        <NamedIndividual IRI="#q0_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasParamName"/>
+        <NamedIndividual IRI="#q0_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">q0_p</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasStructDimension"/>
+        <NamedIndividual IRI="#q0_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasStructType"/>
+        <NamedIndividual IRI="#q0_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">table</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasUnit"/>
+        <NamedIndividual IRI="#q0_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">1000 acre-feet</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasValue"/>
+        <NamedIndividual IRI="#q0_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI"></Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDataType"/>
+        <NamedIndividual IRI="#qmax_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">integer</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDefaultSource"/>
+        <NamedIndividual IRI="#qmax_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string"></Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDefaultValue"/>
+        <NamedIndividual IRI="#qmax_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI"></Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDefinitionType"/>
+        <NamedIndividual IRI="#qmax_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">static</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasMaxValue"/>
+        <NamedIndividual IRI="#qmax_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">100000.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasMinValue"/>
+        <NamedIndividual IRI="#qmax_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasParamName"/>
+        <NamedIndividual IRI="#qmax_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">qmax_p</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasStructDimension"/>
+        <NamedIndividual IRI="#qmax_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasStructType"/>
+        <NamedIndividual IRI="#qmax_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">table</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasUnit"/>
+        <NamedIndividual IRI="#qmax_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">1000 acre-feet</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasValue"/>
+        <NamedIndividual IRI="#qmax_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI"></Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDataType"/>
+        <NamedIndividual IRI="#rho_pop_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">double</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDefaultSource"/>
+        <NamedIndividual IRI="#rho_pop_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">US Census el paso county data: population 2010 v 2014 1.0101 pct growth per year: http://quickfacts.census.gov/qfd/states/48/48141.html 833,487(2014) and 800,647 (2010)</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDefaultValue"/>
+        <NamedIndividual IRI="#rho_pop_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI"></Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDefinitionType"/>
+        <NamedIndividual IRI="#rho_pop_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">user</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasMaxValue"/>
+        <NamedIndividual IRI="#rho_pop_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0.2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasMinValue"/>
+        <NamedIndividual IRI="#rho_pop_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasParamName"/>
+        <NamedIndividual IRI="#rho_pop_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">rho_pop_p</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasStructDimension"/>
+        <NamedIndividual IRI="#rho_pop_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasStructType"/>
+        <NamedIndividual IRI="#rho_pop_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">table</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasUnit"/>
+        <NamedIndividual IRI="#rho_pop_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Percentage/Yr</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasValue"/>
+        <NamedIndividual IRI="#rho_pop_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI"></Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDataType"/>
+        <NamedIndividual IRI="#source_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">integer</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDefaultSource"/>
+        <NamedIndividual IRI="#source_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Historical or forecast headwater node flows</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDefaultValue"/>
+        <NamedIndividual IRI="#source_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI"></Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDefinitionType"/>
+        <NamedIndividual IRI="#source_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">scenario</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasMaxValue"/>
+        <NamedIndividual IRI="#source_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">1000.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasMinValue"/>
+        <NamedIndividual IRI="#source_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasParamName"/>
+        <NamedIndividual IRI="#source_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">source_p</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasStructDimension"/>
+        <NamedIndividual IRI="#source_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasStructType"/>
+        <NamedIndividual IRI="#source_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">table</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasUnit"/>
+        <NamedIndividual IRI="#source_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">1000 acre-feet/yr</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasValue"/>
+        <NamedIndividual IRI="#source_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI"></Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDataType"/>
+        <NamedIndividual IRI="#sw_sustain_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">double</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDefaultSource"/>
+        <NamedIndividual IRI="#sw_sustain_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string"></Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDefaultValue"/>
+        <NamedIndividual IRI="#sw_sustain_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">0.50</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDefinitionType"/>
+        <NamedIndividual IRI="#sw_sustain_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">scenario</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasMaxValue"/>
+        <NamedIndividual IRI="#sw_sustain_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">1.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasMinValue"/>
+        <NamedIndividual IRI="#sw_sustain_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasParamName"/>
+        <NamedIndividual IRI="#sw_sustain_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">sw_sustain_p</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasStructDimension"/>
+        <NamedIndividual IRI="#sw_sustain_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasStructType"/>
+        <NamedIndividual IRI="#sw_sustain_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">scalar</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasUnit"/>
+        <NamedIndividual IRI="#sw_sustain_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Percentage</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasValue"/>
+        <NamedIndividual IRI="#sw_sustain_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">0.50</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDataType"/>
+        <NamedIndividual IRI="#tx_proj_op_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">double</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDefaultSource"/>
+        <NamedIndividual IRI="#tx_proj_op_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string"></Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDefaultValue"/>
+        <NamedIndividual IRI="#tx_proj_op_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">0.43</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDefinitionType"/>
+        <NamedIndividual IRI="#tx_proj_op_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">scenario</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasMaxValue"/>
+        <NamedIndividual IRI="#tx_proj_op_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">1.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasMinValue"/>
+        <NamedIndividual IRI="#tx_proj_op_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasParamName"/>
+        <NamedIndividual IRI="#tx_proj_op_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">tx_proj_op_p</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasStructDimension"/>
+        <NamedIndividual IRI="#tx_proj_op_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasStructType"/>
+        <NamedIndividual IRI="#tx_proj_op_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">scalar</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasUnit"/>
+        <NamedIndividual IRI="#tx_proj_op_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Percentage</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasValue"/>
+        <NamedIndividual IRI="#tx_proj_op_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">0.43</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDataType"/>
+        <NamedIndividual IRI="#urb_av_cost0_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">double</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDefaultSource"/>
+        <NamedIndividual IRI="#urb_av_cost0_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">El Paso water utilities pricing Dec 28 2015: http://www.epwu.org/whatsnew/pdf/Survey.pdf</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDefaultValue"/>
+        <NamedIndividual IRI="#urb_av_cost0_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI"></Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDefinitionType"/>
+        <NamedIndividual IRI="#urb_av_cost0_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">scenario</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasMaxValue"/>
+        <NamedIndividual IRI="#urb_av_cost0_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">2000.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasMinValue"/>
+        <NamedIndividual IRI="#urb_av_cost0_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasParamName"/>
+        <NamedIndividual IRI="#urb_av_cost0_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">urb_av_cost0_p</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasStructDimension"/>
+        <NamedIndividual IRI="#urb_av_cost0_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasStructType"/>
+        <NamedIndividual IRI="#urb_av_cost0_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">table</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasUnit"/>
+        <NamedIndividual IRI="#urb_av_cost0_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">$USD/acre-ft</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasValue"/>
+        <NamedIndividual IRI="#urb_av_cost0_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI"></Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDataType"/>
+        <NamedIndividual IRI="#urb_av_gw_cost0_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">double</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDefaultSource"/>
+        <NamedIndividual IRI="#urb_av_gw_cost0_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string"></Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDefaultValue"/>
+        <NamedIndividual IRI="#urb_av_gw_cost0_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI"></Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDefinitionType"/>
+        <NamedIndividual IRI="#urb_av_gw_cost0_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">scenario</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasMaxValue"/>
+        <NamedIndividual IRI="#urb_av_gw_cost0_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">2000.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasMinValue"/>
+        <NamedIndividual IRI="#urb_av_gw_cost0_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasParamName"/>
+        <NamedIndividual IRI="#urb_av_gw_cost0_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">urb_av_gw_cost0_p</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasStructDimension"/>
+        <NamedIndividual IRI="#urb_av_gw_cost0_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasStructType"/>
+        <NamedIndividual IRI="#urb_av_gw_cost0_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">table</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasUnit"/>
+        <NamedIndividual IRI="#urb_av_gw_cost0_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">$USD/acre-ft</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasValue"/>
+        <NamedIndividual IRI="#urb_av_gw_cost0_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI"></Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDataType"/>
+        <NamedIndividual IRI="#urb_cost_grow_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">double</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDefaultSource"/>
+        <NamedIndividual IRI="#urb_cost_grow_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">El Paso water utilities pricing Dec 28 2015: http://www.epwu.org/whatsnew/pdf/Survey.pdf</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDefaultValue"/>
+        <NamedIndividual IRI="#urb_cost_grow_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI"></Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDefinitionType"/>
+        <NamedIndividual IRI="#urb_cost_grow_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">user</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasMaxValue"/>
+        <NamedIndividual IRI="#urb_cost_grow_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">1.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasMinValue"/>
+        <NamedIndividual IRI="#urb_cost_grow_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasParamName"/>
+        <NamedIndividual IRI="#urb_cost_grow_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">urb_cost_grow_p</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasStructDimension"/>
+        <NamedIndividual IRI="#urb_cost_grow_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasStructType"/>
+        <NamedIndividual IRI="#urb_cost_grow_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">table</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasUnit"/>
+        <NamedIndividual IRI="#urb_cost_grow_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Percentage</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasValue"/>
+        <NamedIndividual IRI="#urb_cost_grow_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI"></Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDataType"/>
+        <NamedIndividual IRI="#urb_gw_cost_grow_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">double</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDefaultSource"/>
+        <NamedIndividual IRI="#urb_gw_cost_grow_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string"></Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDefaultValue"/>
+        <NamedIndividual IRI="#urb_gw_cost_grow_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI"></Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDefinitionType"/>
+        <NamedIndividual IRI="#urb_gw_cost_grow_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">user</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasMaxValue"/>
+        <NamedIndividual IRI="#urb_gw_cost_grow_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0.2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasMinValue"/>
+        <NamedIndividual IRI="#urb_gw_cost_grow_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasParamName"/>
+        <NamedIndividual IRI="#urb_gw_cost_grow_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">urb_gw_cost_grow_p</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasStructDimension"/>
+        <NamedIndividual IRI="#urb_gw_cost_grow_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasStructType"/>
+        <NamedIndividual IRI="#urb_gw_cost_grow_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">table</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasUnit"/>
+        <NamedIndividual IRI="#urb_gw_cost_grow_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Percentage</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasValue"/>
+        <NamedIndividual IRI="#urb_gw_cost_grow_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI"></Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDataType"/>
+        <NamedIndividual IRI="#urb_gw_pump_capacity_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">integer</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDefaultSource"/>
+        <NamedIndividual IRI="#urb_gw_pump_capacity_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Educated guess</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDefaultValue"/>
+        <NamedIndividual IRI="#urb_gw_pump_capacity_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI"></Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDefinitionType"/>
+        <NamedIndividual IRI="#urb_gw_pump_capacity_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">scenario</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasMaxValue"/>
+        <NamedIndividual IRI="#urb_gw_pump_capacity_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0.2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasMinValue"/>
+        <NamedIndividual IRI="#urb_gw_pump_capacity_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasParamName"/>
+        <NamedIndividual IRI="#urb_gw_pump_capacity_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">urb_gw_pump_capacity_p</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasStructDimension"/>
+        <NamedIndividual IRI="#urb_gw_pump_capacity_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasStructType"/>
+        <NamedIndividual IRI="#urb_gw_pump_capacity_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">table</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasUnit"/>
+        <NamedIndividual IRI="#urb_gw_pump_capacity_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">acre-feet</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasValue"/>
+        <NamedIndividual IRI="#urb_gw_pump_capacity_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI"></Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDataType"/>
+        <NamedIndividual IRI="#urb_price_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">double</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDefaultSource"/>
+        <NamedIndividual IRI="#urb_price_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">El paso water utilities pricing source Dec 28 2015: http://www.epwu.org/whatsnew/pdf/Survey.pdf</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDefaultValue"/>
+        <NamedIndividual IRI="#urb_price_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI"></Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDefinitionType"/>
+        <NamedIndividual IRI="#urb_price_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">scenario</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasMaxValue"/>
+        <NamedIndividual IRI="#urb_price_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">2000.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasMinValue"/>
+        <NamedIndividual IRI="#urb_price_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasParamName"/>
+        <NamedIndividual IRI="#urb_price_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">urb_price_p</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasStructDimension"/>
+        <NamedIndividual IRI="#urb_price_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasStructType"/>
+        <NamedIndividual IRI="#urb_price_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">table</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasUnit"/>
+        <NamedIndividual IRI="#urb_price_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">$1000 USD/1000 acre-ft</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasValue"/>
+        <NamedIndividual IRI="#urb_price_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI"></Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDataType"/>
+        <NamedIndividual IRI="#urb_use_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">double</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDefaultSource"/>
+        <NamedIndividual IRI="#urb_use_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">El Paso water production Dec 28 2015: http://www.epwu.org/water/water_resources.html</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDefaultValue"/>
+        <NamedIndividual IRI="#urb_use_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI"></Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDefinitionType"/>
+        <NamedIndividual IRI="#urb_use_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">scenario</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasMaxValue"/>
+        <NamedIndividual IRI="#urb_use_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">300.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasMinValue"/>
+        <NamedIndividual IRI="#urb_use_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasParamName"/>
+        <NamedIndividual IRI="#urb_use_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">urb_use_p</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasStructDimension"/>
+        <NamedIndividual IRI="#urb_use_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasStructType"/>
+        <NamedIndividual IRI="#urb_use_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">table</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasUnit"/>
+        <NamedIndividual IRI="#urb_use_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">1000 acre-ft/yr</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasValue"/>
+        <NamedIndividual IRI="#urb_use_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI"></Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDataType"/>
+        <NamedIndividual IRI="#us_mx_1906_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">integer</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDefaultSource"/>
+        <NamedIndividual IRI="#us_mx_1906_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/International_Diversion_Dam</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDefaultValue"/>
+        <NamedIndividual IRI="#us_mx_1906_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">60</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDefinitionType"/>
+        <NamedIndividual IRI="#us_mx_1906_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">scenario</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasMaxValue"/>
+        <NamedIndividual IRI="#us_mx_1906_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">100.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasMinValue"/>
+        <NamedIndividual IRI="#us_mx_1906_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasParamName"/>
+        <NamedIndividual IRI="#us_mx_1906_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">us_mx_1906_p</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasStructDimension"/>
+        <NamedIndividual IRI="#us_mx_1906_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasStructType"/>
+        <NamedIndividual IRI="#us_mx_1906_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">scalar</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasUnit"/>
+        <NamedIndividual IRI="#us_mx_1906_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">1000 acre-feet/yr</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasValue"/>
+        <NamedIndividual IRI="#us_mx_1906_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">30</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDataType"/>
+        <NamedIndividual IRI="#z0_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">integer</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDefaultSource"/>
+        <NamedIndividual IRI="#z0_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string"></Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDefaultValue"/>
+        <NamedIndividual IRI="#z0_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI"></Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDefinitionType"/>
+        <NamedIndividual IRI="#z0_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">scenario</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasMaxValue"/>
+        <NamedIndividual IRI="#z0_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">2544.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasMinValue"/>
+        <NamedIndividual IRI="#z0_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasParamName"/>
+        <NamedIndividual IRI="#z0_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">z0_p</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasStructDimension"/>
+        <NamedIndividual IRI="#z0_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasStructType"/>
+        <NamedIndividual IRI="#z0_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">table</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasUnit"/>
+        <NamedIndividual IRI="#z0_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">1000 acre-feet</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasValue"/>
+        <NamedIndividual IRI="#z0_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI"></Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDataType"/>
+        <NamedIndividual IRI="#zmax_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">integer</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDefaultSource"/>
+        <NamedIndividual IRI="#zmax_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string"></Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDefaultValue"/>
+        <NamedIndividual IRI="#zmax_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI"></Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDefinitionType"/>
+        <NamedIndividual IRI="#zmax_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">scenario</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasMaxValue"/>
+        <NamedIndividual IRI="#zmax_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">5000.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasMinValue"/>
+        <NamedIndividual IRI="#zmax_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasParamName"/>
+        <NamedIndividual IRI="#zmax_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">zmax_p</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasStructDimension"/>
+        <NamedIndividual IRI="#zmax_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasStructType"/>
+        <NamedIndividual IRI="#zmax_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">table</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasUnit"/>
+        <NamedIndividual IRI="#zmax_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">1000 acre-feet</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasValue"/>
+        <NamedIndividual IRI="#zmax_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI"></Literal>
+    </DataPropertyAssertion>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#runsA"/>
+        <ObjectProperty IRI="#isSimulatedBy"/>
+    </InverseObjectProperties>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#isMemberOf"/>
+    </FunctionalObjectProperty>
+    <InverseFunctionalObjectProperty>
+        <ObjectProperty IRI="#hasInput"/>
+    </InverseFunctionalObjectProperty>
+    <InverseFunctionalObjectProperty>
+        <ObjectProperty IRI="#hasOutput"/>
+    </InverseFunctionalObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#hasInput"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#hasOutput"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#isMemberOf"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#isSimulatedBy"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#runsA"/>
+    </AsymmetricObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#hasInput"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#hasModelCreator"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#hasOutput"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#isMemberOf"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#isSimulatedBy"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#runsA"/>
+    </IrreflexiveObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasInput"/>
+        <Class IRI="-23#Model"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasModelCreator"/>
+        <Class IRI="-23#Model"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasOutput"/>
+        <Class IRI="-23#Model"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isMemberOf"/>
+        <Class IRI="#Person"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isSimulatedBy"/>
+        <Class IRI="-23#Model"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#runsA"/>
+        <Class IRI="#Simulation_software"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasInput"/>
+        <Class IRI="#Input"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasModelCreator"/>
+        <Class IRI="#Person"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasOutput"/>
+        <Class IRI="#Output"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isMemberOf"/>
+        <Class IRI="#Institution"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isSimulatedBy"/>
+        <Class IRI="#Simulation_software"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#runsA"/>
+        <Class IRI="-23#Model"/>
+    </ObjectPropertyRange>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasCity"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasSwVersion"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#hasCity"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#hasCountry"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#hasDataType"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#hasDefaultSource"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#hasDefaultValue"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#hasDefinitionType"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#hasDepartment"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#hasDescription"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#hasEmail"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#hasInstitutionName"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#hasMaxValue"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#hasMinValue"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#hasModelID"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#hasModelLicense"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#hasModelName"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#hasModelSponsor"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#hasModelVersion"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#hasName"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#hasParamName"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#hasState"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#hasStructDimension"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#hasStructType"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#hasSwName"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#hasSwVersion"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#hasUnit"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#hasValue"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#modelDateCreated"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#modelDateModified"/>
+    </FunctionalDataProperty>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasCity"/>
+        <Class IRI="#Institution"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasCountry"/>
+        <Class IRI="#Institution"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasDataType"/>
+        <Class IRI="#Parameter"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasDefaultSource"/>
+        <Class IRI="#Parameter"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasDefaultValue"/>
+        <Class IRI="#Parameter"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasDefinitionType"/>
+        <Class IRI="#Parameter"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasDepartment"/>
+        <Class IRI="#Institution"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasDescription"/>
+        <Class IRI="#Parameter"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasDescription"/>
+        <Class IRI="#Variable"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasEmail"/>
+        <Class IRI="#Person"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasInstitutionName"/>
+        <Class IRI="#Institution"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasMaxValue"/>
+        <Class IRI="#Parameter"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasMinValue"/>
+        <Class IRI="#Parameter"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasModelID"/>
+        <Class IRI="-23#Model"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasModelLicense"/>
+        <Class IRI="-23#Model"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasModelName"/>
+        <Class IRI="-23#Model"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasModelSponsor"/>
+        <Class IRI="-23#Model"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasModelVersion"/>
+        <Class IRI="-23#Model"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasName"/>
+        <Class IRI="#Person"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasParamName"/>
+        <Class IRI="#Parameter"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasState"/>
+        <Class IRI="#Institution"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasStructDimension"/>
+        <Class IRI="#Parameter"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasStructType"/>
+        <Class IRI="#Parameter"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasSwName"/>
+        <Class IRI="#Simulation_software"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasSwVersion"/>
+        <Class IRI="#Simulation_software"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasUnit"/>
+        <Class IRI="#Parameter"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasValue"/>
+        <Class IRI="#Parameter"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#modelDateCreated"/>
+        <Class IRI="-23#Model"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#modelDateModified"/>
+        <Class IRI="-23#Model"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasCity"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasCountry"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasDataType"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasDefaultSource"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasDefaultValue"/>
+        <Datatype abbreviatedIRI="xsd:anyURI"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasDefinitionType"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasDepartment"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasDescription"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasEmail"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasInstitutionName"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasMaxValue"/>
+        <Datatype abbreviatedIRI="xsd:decimal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasMinValue"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasModelID"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasModelLicense"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasModelName"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasModelSponsor"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasModelVersion"/>
+        <Datatype abbreviatedIRI="xsd:decimal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasName"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasParamName"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasState"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasStructDimension"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasStructType"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasSwName"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasSwVersion"/>
+        <Datatype abbreviatedIRI="xsd:decimal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasUnit"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasValue"/>
+        <Datatype abbreviatedIRI="xsd:anyURI"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#modelDateCreated"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#modelDateModified"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#B1_area_vol_p</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Impact of changes in volume on changes in area</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#B2_area_volsq_p</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Impact of changes in volume on changes in volume squared on changes in area</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#BC_p</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Proportion downstream delivery under Rio Grande Compact</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Cost_p</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Crop Production Costs</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Evap_rate_p</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Reservoir evaporation (feet loss per exposed acre)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#LANDRHS_p</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Land available by irrigation district</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Price_p</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Crop prices</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Yield_p</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Crop Yield</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ag_av_gw_cost_p</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Agricultural average costs of pumping ground water</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ag_gw_pump_capacity_p</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Agricultural pumping capacity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#elast_p</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Water price elastacity of demand</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#gw_sustain_p</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Terminal sustainability proportion of starting ground water storage</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#land_p</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Land in production in a base full supply year eg 2005</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#pop0_p</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Urban Customers</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#q0_p</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Starting Storage</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#qmax_p</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Maximum storage capacity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#rho_pop_p</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Population growth rate per year</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#source_p</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Annual basin inflows at headwaters -- snowpack or rain</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#sw_sustain_p</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Terminal sustainability proportion of starting surface water storage</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#tx_proj_op_p</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Project operation tx proportion of nm tx water sharing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#urb_av_cost0_p</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Urban Average Cost</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#urb_av_gw_cost0_p</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Average cost of urban aquifer pumping</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#urb_cost_grow_p</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Percentage growth in urban average cost of supply</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#urb_gw_cost_grow_p</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Percentage growth of urban aquifer pumping</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#urb_gw_pump_capacity_p</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Urban ground water pump capacity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#urb_price_p</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Urban base price of water</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#urb_use_p</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Urban base water use</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#us_mx_1906_p</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">US-MX 1906 treaty flows</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#z0_p</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Project storage starting volume</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#zmax_p</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Max project storage</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 3.5.4) http://owlapi.sourceforge.net -->
+
