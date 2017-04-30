@@ -65,7 +65,5 @@ public class App
 		finally{
 			System.out.println("end of populating " + className);
 		}
-	}
-        String filename = "C:\\jsonParserCI\\paramTest.json";
-      
+	}      
 }
