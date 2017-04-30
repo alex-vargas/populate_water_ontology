@@ -15,10 +15,10 @@ public class InstitutionMapping {
 		institutionMap.put("country", "hasCountry");
 		institutionMap.put("state", "hasState");
 	}
-	public Map<String, String> getPersonMap() {
+	public Map<String, String> getInstitutionMap() {
 		return institutionMap;
 	}
-	public void setPersonMap(Map<String, String> personMap) {
+	public void setInstitutionMap(Map<String, String> personMap) {
 		this.institutionMap = personMap;
 	}
 }

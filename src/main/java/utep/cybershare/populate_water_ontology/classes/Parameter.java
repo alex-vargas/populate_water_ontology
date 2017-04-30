@@ -17,6 +17,10 @@ public class Parameter {
 	String definitionType;
 	URI paramValue;
 	
+	public String toString(){
+		return getParamName().replaceAll(" ", "_");
+	}
+	
 	public String getParamName() {
 		return paramName;
 	}
@@ -88,13 +92,5 @@ public class Parameter {
 	}
 	public void setParamValue(URI paramValue) {
 		this.paramValue = paramValue;
-	}
-	@Override
-	public String toString() {
-		return "Parameter [paramName=" + paramName + ", paramLabel=" + paramLabel + ", paramUnit=" + paramUnit
-				+ ", paramDefaultValue=" + paramDefaultValue + ", paramDefaultSource=" + paramDefaultSource
-				+ ", maxValue=" + maxValue + ", minValue=" + minValue + ", structType=" + structType
-				+ ", structDimension=" + structDimension + ", dataType=" + dataType + ", definitionType="
-				+ definitionType + ", paramValue=" + paramValue + "]";
 	}
 }

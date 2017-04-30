@@ -6,6 +6,10 @@ public class Institution {
 	String city;
 	String country;
 	String state;
+	
+	public String toString(){
+		return getOrganization().replaceAll(" ", "_");
+	}
 	public String getDepartment() {
 		return department;
 	}

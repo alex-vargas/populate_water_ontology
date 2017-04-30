@@ -14,6 +14,10 @@ public class Model {
 	float version;
 	String sponsor;
 	
+	public String toString(){
+		return getModelName().replaceAll(" ", "_");
+	}
+	
 	public int get_id() {
 		return id;
 	}

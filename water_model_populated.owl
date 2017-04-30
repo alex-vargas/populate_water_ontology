@@ -258,6 +258,10 @@
         <NamedIndividual IRI="#Price_p"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Model"/>
+        <NamedIndividual IRI="#RIO_GRANDE_BASIN_HYDROECONOMIC_PROTOTYPE"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Parameter"/>
         <NamedIndividual IRI="#Yield_p"/>
     </ClassAssertion>
@@ -274,20 +278,12 @@
         <NamedIndividual IRI="#elast_p"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Simulation_software"/>
-        <NamedIndividual IRI="#gams"/>
-    </ClassAssertion>
-    <ClassAssertion>
         <Class IRI="#Parameter"/>
         <NamedIndividual IRI="#gw_sustain_p"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Parameter"/>
         <NamedIndividual IRI="#land_p"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Model"/>
-        <NamedIndividual IRI="#mModel"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Parameter"/>
@@ -357,6 +353,190 @@
         <Class IRI="#Parameter"/>
         <NamedIndividual IRI="#zmax_p"/>
     </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Simulation_software"/>
+        <NamedIndividual IRI="#The_General_Algebraic_Modeling_System_(GAMS)"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isMemberOf"/>
+        <NamedIndividual IRI="#Alex_Mayer"/>
+        <NamedIndividual IRI="#Michigan_Tech_University"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isMemberOf"/>
+        <NamedIndividual IRI="#Frank_Ward"/>
+        <NamedIndividual IRI="#New_Mexico_State_University"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasInput"/>
+        <NamedIndividual IRI="#RIO_GRANDE_BASIN_HYDROECONOMIC_PROTOTYPE"/>
+        <NamedIndividual IRI="#B1_area_vol_p"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasInput"/>
+        <NamedIndividual IRI="#RIO_GRANDE_BASIN_HYDROECONOMIC_PROTOTYPE"/>
+        <NamedIndividual IRI="#B2_area_volsq_p"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasInput"/>
+        <NamedIndividual IRI="#RIO_GRANDE_BASIN_HYDROECONOMIC_PROTOTYPE"/>
+        <NamedIndividual IRI="#BC_p"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasInput"/>
+        <NamedIndividual IRI="#RIO_GRANDE_BASIN_HYDROECONOMIC_PROTOTYPE"/>
+        <NamedIndividual IRI="#Cost_p"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasInput"/>
+        <NamedIndividual IRI="#RIO_GRANDE_BASIN_HYDROECONOMIC_PROTOTYPE"/>
+        <NamedIndividual IRI="#Evap_rate_p"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasInput"/>
+        <NamedIndividual IRI="#RIO_GRANDE_BASIN_HYDROECONOMIC_PROTOTYPE"/>
+        <NamedIndividual IRI="#LANDRHS_p"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasInput"/>
+        <NamedIndividual IRI="#RIO_GRANDE_BASIN_HYDROECONOMIC_PROTOTYPE"/>
+        <NamedIndividual IRI="#Price_p"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasInput"/>
+        <NamedIndividual IRI="#RIO_GRANDE_BASIN_HYDROECONOMIC_PROTOTYPE"/>
+        <NamedIndividual IRI="#Yield_p"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasInput"/>
+        <NamedIndividual IRI="#RIO_GRANDE_BASIN_HYDROECONOMIC_PROTOTYPE"/>
+        <NamedIndividual IRI="#ag_av_gw_cost_p"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasInput"/>
+        <NamedIndividual IRI="#RIO_GRANDE_BASIN_HYDROECONOMIC_PROTOTYPE"/>
+        <NamedIndividual IRI="#ag_gw_pump_capacity_p"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasInput"/>
+        <NamedIndividual IRI="#RIO_GRANDE_BASIN_HYDROECONOMIC_PROTOTYPE"/>
+        <NamedIndividual IRI="#elast_p"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasInput"/>
+        <NamedIndividual IRI="#RIO_GRANDE_BASIN_HYDROECONOMIC_PROTOTYPE"/>
+        <NamedIndividual IRI="#gw_sustain_p"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasInput"/>
+        <NamedIndividual IRI="#RIO_GRANDE_BASIN_HYDROECONOMIC_PROTOTYPE"/>
+        <NamedIndividual IRI="#land_p"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasInput"/>
+        <NamedIndividual IRI="#RIO_GRANDE_BASIN_HYDROECONOMIC_PROTOTYPE"/>
+        <NamedIndividual IRI="#pop0_p"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasInput"/>
+        <NamedIndividual IRI="#RIO_GRANDE_BASIN_HYDROECONOMIC_PROTOTYPE"/>
+        <NamedIndividual IRI="#q0_p"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasInput"/>
+        <NamedIndividual IRI="#RIO_GRANDE_BASIN_HYDROECONOMIC_PROTOTYPE"/>
+        <NamedIndividual IRI="#qmax_p"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasInput"/>
+        <NamedIndividual IRI="#RIO_GRANDE_BASIN_HYDROECONOMIC_PROTOTYPE"/>
+        <NamedIndividual IRI="#rho_pop_p"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasInput"/>
+        <NamedIndividual IRI="#RIO_GRANDE_BASIN_HYDROECONOMIC_PROTOTYPE"/>
+        <NamedIndividual IRI="#source_p"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasInput"/>
+        <NamedIndividual IRI="#RIO_GRANDE_BASIN_HYDROECONOMIC_PROTOTYPE"/>
+        <NamedIndividual IRI="#sw_sustain_p"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasInput"/>
+        <NamedIndividual IRI="#RIO_GRANDE_BASIN_HYDROECONOMIC_PROTOTYPE"/>
+        <NamedIndividual IRI="#tx_proj_op_p"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasInput"/>
+        <NamedIndividual IRI="#RIO_GRANDE_BASIN_HYDROECONOMIC_PROTOTYPE"/>
+        <NamedIndividual IRI="#urb_av_cost0_p"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasInput"/>
+        <NamedIndividual IRI="#RIO_GRANDE_BASIN_HYDROECONOMIC_PROTOTYPE"/>
+        <NamedIndividual IRI="#urb_av_gw_cost0_p"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasInput"/>
+        <NamedIndividual IRI="#RIO_GRANDE_BASIN_HYDROECONOMIC_PROTOTYPE"/>
+        <NamedIndividual IRI="#urb_cost_grow_p"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasInput"/>
+        <NamedIndividual IRI="#RIO_GRANDE_BASIN_HYDROECONOMIC_PROTOTYPE"/>
+        <NamedIndividual IRI="#urb_gw_cost_grow_p"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasInput"/>
+        <NamedIndividual IRI="#RIO_GRANDE_BASIN_HYDROECONOMIC_PROTOTYPE"/>
+        <NamedIndividual IRI="#urb_gw_pump_capacity_p"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasInput"/>
+        <NamedIndividual IRI="#RIO_GRANDE_BASIN_HYDROECONOMIC_PROTOTYPE"/>
+        <NamedIndividual IRI="#urb_price_p"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasInput"/>
+        <NamedIndividual IRI="#RIO_GRANDE_BASIN_HYDROECONOMIC_PROTOTYPE"/>
+        <NamedIndividual IRI="#urb_use_p"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasInput"/>
+        <NamedIndividual IRI="#RIO_GRANDE_BASIN_HYDROECONOMIC_PROTOTYPE"/>
+        <NamedIndividual IRI="#us_mx_1906_p"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasInput"/>
+        <NamedIndividual IRI="#RIO_GRANDE_BASIN_HYDROECONOMIC_PROTOTYPE"/>
+        <NamedIndividual IRI="#z0_p"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasInput"/>
+        <NamedIndividual IRI="#RIO_GRANDE_BASIN_HYDROECONOMIC_PROTOTYPE"/>
+        <NamedIndividual IRI="#zmax_p"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasModelCreator"/>
+        <NamedIndividual IRI="#RIO_GRANDE_BASIN_HYDROECONOMIC_PROTOTYPE"/>
+        <NamedIndividual IRI="#Alex_Mayer"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasModelCreator"/>
+        <NamedIndividual IRI="#RIO_GRANDE_BASIN_HYDROECONOMIC_PROTOTYPE"/>
+        <NamedIndividual IRI="#Frank_Ward"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isSimulatedBy"/>
+        <NamedIndividual IRI="#RIO_GRANDE_BASIN_HYDROECONOMIC_PROTOTYPE"/>
+        <NamedIndividual IRI="#The_General_Algebraic_Modeling_System_(GAMS)"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#runsA"/>
+        <NamedIndividual IRI="#The_General_Algebraic_Modeling_System_(GAMS)"/>
+        <NamedIndividual IRI="#RIO_GRANDE_BASIN_HYDROECONOMIC_PROTOTYPE"/>
+    </ObjectPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasEmail"/>
         <NamedIndividual IRI="#Alex_Mayer"/>
@@ -813,6 +993,16 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI"></Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#hasModelID"/>
+        <NamedIndividual IRI="#RIO_GRANDE_BASIN_HYDROECONOMIC_PROTOTYPE"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasModelName"/>
+        <NamedIndividual IRI="#RIO_GRANDE_BASIN_HYDROECONOMIC_PROTOTYPE"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">RIO GRANDE BASIN HYDROECONOMIC PROTOTYPE</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#hasDataType"/>
         <NamedIndividual IRI="#Yield_p"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">double</Literal>
@@ -1033,11 +1223,6 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI"></Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#hasSwName"/>
-        <NamedIndividual IRI="#gams"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">The General Algebraic Modeling System (GAMS)</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
         <DataProperty IRI="#hasDataType"/>
         <NamedIndividual IRI="#gw_sustain_p"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">double</Literal>
@@ -1146,46 +1331,6 @@
         <DataProperty IRI="#hasValue"/>
         <NamedIndividual IRI="#land_p"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI"></Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasModelID"/>
-        <NamedIndividual IRI="#mModel"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">0</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasModelLicense"/>
-        <NamedIndividual IRI="#mModel"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Creative Commons Version 4.0</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasModelName"/>
-        <NamedIndividual IRI="#mModel"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">RIO GRANDE BASIN HYDROECONOMIC PROTOTYPE</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasModelSponsor"/>
-        <NamedIndividual IRI="#mModel"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">USDA NIFA 5 year grant beginning March 2015</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasModelVersion"/>
-        <NamedIndividual IRI="#mModel"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">2.0</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#modelDateCreated"/>
-        <NamedIndividual IRI="#mModel"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2016-09-02 01:00:00.0</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#modelDateModified"/>
-        <NamedIndividual IRI="#mModel"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2016-09-02 16:27:00.0</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#null"/>
-        <NamedIndividual IRI="#mModel"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Rio Grande Basin Model: Expandable Prototype. Contains essential elements of full Upper Rio Grande Basin Model.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasDataType"/>
@@ -2121,6 +2266,11 @@
         <DataProperty IRI="#hasValue"/>
         <NamedIndividual IRI="#zmax_p"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI"></Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasSwName"/>
+        <NamedIndividual IRI="#The_General_Algebraic_Modeling_System_(GAMS)"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">The General Algebraic Modeling System (GAMS)</Literal>
     </DataPropertyAssertion>
     <InverseObjectProperties>
         <ObjectProperty IRI="#runsA"/>
