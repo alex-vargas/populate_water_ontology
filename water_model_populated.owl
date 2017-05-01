@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
 <Ontology xmlns="http://www.w3.org/2002/07/owl#"
-     xml:base="http://www.semanticweb.org/aleja/ontologies/2017/3/water_model"
+     xml:base="http://www.semanticweb.org/FMA/water_model"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     ontologyIRI="http://www.semanticweb.org/aleja/ontologies/2017/3/water_model">
-    <Prefix name="" IRI="http://www.semanticweb.org/aleja/ontologies/2017/3/water_model"/>
+     ontologyIRI="http://www.semanticweb.org/FMA/water_model">
+    <Prefix name="" IRI="http://www.semanticweb.org/FMA/water_model"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
     <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
@@ -32,6 +32,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="#Person"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ProjectionData"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Simulation_software"/>
@@ -61,6 +64,9 @@
         <DataProperty IRI="#hasCity"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="#hasClimateSelection"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="#hasCountry"/>
     </Declaration>
     <Declaration>
@@ -83,6 +89,9 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="#hasEmail"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasHumanIntervention"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#hasInstitutionName"/>
@@ -162,6 +171,10 @@
         <Class IRI="#Input"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#ProjectionData"/>
+        <Class IRI="#Input"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Variable"/>
         <Class IRI="#Output"/>
     </SubClassOf>
@@ -222,6 +235,10 @@
         <Class IRI="#Simulation_software"/>
     </DisjointClasses>
     <DisjointClasses>
+        <Class IRI="#Parameter"/>
+        <Class IRI="#ProjectionData"/>
+    </DisjointClasses>
+    <DisjointClasses>
         <Class IRI="#Person"/>
         <Class IRI="#Simulation_software"/>
     </DisjointClasses>
@@ -236,6 +253,10 @@
     <ClassAssertion>
         <Class IRI="#Person"/>
         <NamedIndividual IRI="#Alex_Mayer"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ProjectionData"/>
+        <NamedIndividual IRI="#AveraBusin"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Parameter"/>
@@ -418,6 +439,11 @@
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasInput"/>
         <NamedIndividual IRI="#RIO_GRANDE_BASIN_HYDROECONOMIC_PROTOTYPE"/>
+        <NamedIndividual IRI="#AveraBusin"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasInput"/>
+        <NamedIndividual IRI="#RIO_GRANDE_BASIN_HYDROECONOMIC_PROTOTYPE"/>
         <NamedIndividual IRI="#B1_area_vol_p"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
@@ -576,6 +602,51 @@
         <NamedIndividual IRI="#Frank_Ward"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasOutput"/>
+        <NamedIndividual IRI="#RIO_GRANDE_BASIN_HYDROECONOMIC_PROTOTYPE"/>
+        <NamedIndividual IRI="#Ag_Ben_v"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasOutput"/>
+        <NamedIndividual IRI="#RIO_GRANDE_BASIN_HYDROECONOMIC_PROTOTYPE"/>
+        <NamedIndividual IRI="#Ag_use_v"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasOutput"/>
+        <NamedIndividual IRI="#RIO_GRANDE_BASIN_HYDROECONOMIC_PROTOTYPE"/>
+        <NamedIndividual IRI="#Env_ben_v"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasOutput"/>
+        <NamedIndividual IRI="#RIO_GRANDE_BASIN_HYDROECONOMIC_PROTOTYPE"/>
+        <NamedIndividual IRI="#Q_v"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasOutput"/>
+        <NamedIndividual IRI="#RIO_GRANDE_BASIN_HYDROECONOMIC_PROTOTYPE"/>
+        <NamedIndividual IRI="#X_v"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasOutput"/>
+        <NamedIndividual IRI="#RIO_GRANDE_BASIN_HYDROECONOMIC_PROTOTYPE"/>
+        <NamedIndividual IRI="#Z_v"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasOutput"/>
+        <NamedIndividual IRI="#RIO_GRANDE_BASIN_HYDROECONOMIC_PROTOTYPE"/>
+        <NamedIndividual IRI="#rec_ben_v"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasOutput"/>
+        <NamedIndividual IRI="#RIO_GRANDE_BASIN_HYDROECONOMIC_PROTOTYPE"/>
+        <NamedIndividual IRI="#urb_use_v"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasOutput"/>
+        <NamedIndividual IRI="#RIO_GRANDE_BASIN_HYDROECONOMIC_PROTOTYPE"/>
+        <NamedIndividual IRI="#urb_value_v"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#isSimulatedBy"/>
         <NamedIndividual IRI="#RIO_GRANDE_BASIN_HYDROECONOMIC_PROTOTYPE"/>
         <NamedIndividual IRI="#The_General_Algebraic_Modeling_System_(GAMS)"/>
@@ -614,6 +685,16 @@
         <DataProperty IRI="#hasName"/>
         <NamedIndividual IRI="#Alex_Mayer"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Alex Mayer</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasClimateSelection"/>
+        <NamedIndividual IRI="#AveraBusin"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Average</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasHumanIntervention"/>
+        <NamedIndividual IRI="#AveraBusin"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Business as Usual</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasDataType"/>
@@ -2546,6 +2627,9 @@
         <DataProperty IRI="#hasCity"/>
     </FunctionalDataProperty>
     <FunctionalDataProperty>
+        <DataProperty IRI="#hasClimateSelection"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
         <DataProperty IRI="#hasCountry"/>
     </FunctionalDataProperty>
     <FunctionalDataProperty>
@@ -2568,6 +2652,9 @@
     </FunctionalDataProperty>
     <FunctionalDataProperty>
         <DataProperty IRI="#hasEmail"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#hasHumanIntervention"/>
     </FunctionalDataProperty>
     <FunctionalDataProperty>
         <DataProperty IRI="#hasInstitutionName"/>
@@ -2643,6 +2730,10 @@
         <Class IRI="#Institution"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
+        <DataProperty IRI="#hasClimateSelection"/>
+        <Class IRI="#ProjectionData"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
         <DataProperty IRI="#hasCountry"/>
         <Class IRI="#Institution"/>
     </DataPropertyDomain>
@@ -2673,6 +2764,10 @@
     <DataPropertyDomain>
         <DataProperty IRI="#hasEmail"/>
         <Class IRI="#Person"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasHumanIntervention"/>
+        <Class IRI="#ProjectionData"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#hasInstitutionName"/>
@@ -2768,6 +2863,10 @@
     </DataPropertyDomain>
     <DataPropertyRange>
         <DataProperty IRI="#hasCity"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasClimateSelection"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
@@ -2800,6 +2899,10 @@
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#hasEmail"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasHumanIntervention"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>

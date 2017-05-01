@@ -16,6 +16,7 @@ import utep.cybershare.populate_water_ontology.classes.Model;
 import utep.cybershare.populate_water_ontology.classes.Parameter;
 import utep.cybershare.populate_water_ontology.classes.Person;
 import utep.cybershare.populate_water_ontology.classes.PersonList;
+import utep.cybershare.populate_water_ontology.classes.ProjectionData;
 import utep.cybershare.populate_water_ontology.classes.Software;
 import utep.cybershare.populate_water_ontology.classes.Variable;
 import utep.cybershare.populate_water_ontology.classes.mList;
@@ -33,6 +34,7 @@ public class App
 	private static List<Variable> mVariableList;
 	private static List<Model> mModelList;
 	private static List<Software> mSoftwareList;
+	private static List<ProjectionData> mProjectionList;
 	
     public static void main( String[] args ) throws OWLOntologyCreationException
     {
@@ -42,11 +44,13 @@ public class App
     	mModelList = new ArrayList<Model>();
     	mSoftwareList = new ArrayList<Software>();
     	mVariableList = new ArrayList<Variable>();
+    	mProjectionList = new ArrayList<ProjectionData>();
     	
 		mOwl = new owlpopulation();
 		String bucketMetaFilePath = "C:\\jsonParserCI\\bucket-meta-v2.json";
 		String parametersFilePath = "C:\\jsonParserCI\\paramTest.json";
 		String variablesFilePath = "C:\\jsonParserCI\\varTest.json";
+		String projectionFilePath = "C:\\jsonParserCI\\projectionType.json";
 
     	populate("Institution", bucketMetaFilePath);
     	populate("Person", bucketMetaFilePath);
@@ -54,6 +58,7 @@ public class App
     	populate("Variable", variablesFilePath);
     	populate("Model", bucketMetaFilePath);
     	populate("Simulation_software", bucketMetaFilePath);
+    	populate("ProjectionData", projectionFilePath);
     	populate(null, null);
 		String finalPathOWL = mOwl.saveToFile();
 		System.out.println("Ontology saved to: " + finalPathOWL);
@@ -62,7 +67,8 @@ public class App
 
 	private static void populate(String className, String filename) {
 		if(className == null && filename == null){
-			mOwl.addObjectPropertyToOwl(mParameterList, mModelList, mSoftwareList, mPersonList, mInstitutionList);
+			mOwl.addObjectPropertyToOwl(mParameterList, mModelList, mSoftwareList, mPersonList, mInstitutionList,
+					mVariableList, mProjectionList);
 			return;
 		}
         Gson g = new Gson();
@@ -110,6 +116,12 @@ public class App
 				for(Variable variable : result){
 					mListObjects.add(variable);
 					mVariableList.add(variable);
+				}
+			}else if(className.equals("ProjectionData")){
+				ProjectionData[] result = g.fromJson(reader, ProjectionData[].class);
+				for(ProjectionData projData : result){
+					mListObjects.add(projData);
+					mProjectionList.add(projData);
 				}
 			}
 	    				

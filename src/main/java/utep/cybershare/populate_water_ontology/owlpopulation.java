@@ -29,12 +29,14 @@ import utep.cybershare.populate_water_ontology.classes.Institution;
 import utep.cybershare.populate_water_ontology.classes.Model;
 import utep.cybershare.populate_water_ontology.classes.Parameter;
 import utep.cybershare.populate_water_ontology.classes.Person;
+import utep.cybershare.populate_water_ontology.classes.ProjectionData;
 import utep.cybershare.populate_water_ontology.classes.Software;
 import utep.cybershare.populate_water_ontology.classes.Variable;
 import utep.cybershare.populate_water_ontology.mapping.InstitutionMapping;
 import utep.cybershare.populate_water_ontology.mapping.ModelMapping;
 import utep.cybershare.populate_water_ontology.mapping.ParamMapping;
 import utep.cybershare.populate_water_ontology.mapping.PersonMapping;
+import utep.cybershare.populate_water_ontology.mapping.ProjectionMapping;
 import utep.cybershare.populate_water_ontology.mapping.SoftwareMapping;
 import utep.cybershare.populate_water_ontology.mapping.VariableMapping;
 
@@ -51,7 +53,7 @@ public class owlpopulation {
 	public owlpopulation() throws OWLOntologyCreationException {
 		ontFile = "water_model_populated.owl";
 		ontSchemaPath = "C:\\Users\\aleja\\Dropbox\\Info\\PhD\\UTEP\\Cyberinfrastructure applications\\Project2\\water_model.owl";
-		ontIRI = "http://www.semanticweb.org/aleja/ontologies/2017/3/water_model#";
+		ontIRI = "http://www.semanticweb.org/FMA/water_model#";
 		mManager = OWLManager.createOWLOntologyManager();
 		mFactory = mManager.getOWLDataFactory();
 		
@@ -74,6 +76,8 @@ public class owlpopulation {
 			mIndividual = mIndividual = mFactory.getOWLNamedIndividual(":" + (Institution) mObj, prefixManager);
 		else if(classToMap.equals("Variable"))
 			mIndividual = mIndividual = mFactory.getOWLNamedIndividual(":" + (Variable) mObj, prefixManager);
+		else if(classToMap.equals("ProjectionData"))
+			mIndividual = mIndividual = mFactory.getOWLNamedIndividual(":" + (ProjectionData) mObj, prefixManager);
 		
 		addIndAxiom(mIndividual, classToMap);
 		addDataProperty(mObj, mIndividual, classToMap);
@@ -87,6 +91,7 @@ public class owlpopulation {
 		PersonMapping personMap = null;
 		InstitutionMapping institutionMap = null;
 		VariableMapping varMap = null;
+		ProjectionMapping proMap = null;
 		
 		if(classToMap.equals("Parameter"))
 			paramMap = new ParamMapping();
@@ -100,6 +105,8 @@ public class owlpopulation {
 			institutionMap = new InstitutionMapping();
 		else if(classToMap.equals("Variable"))
 			varMap = new VariableMapping();
+		else if(classToMap.equals("ProjectionData"))
+			proMap = new ProjectionMapping();
 
 		for(Field field : clazz.getDeclaredFields()) {
 			field.setAccessible(true);
@@ -107,7 +114,7 @@ public class owlpopulation {
 			try {
 				if((paramMap != null && paramMap.getParamMap().containsKey(field.getName())) || 
 						(modelMap != null) || (softwareMap != null) || (personMap != null) || (institutionMap != null) ||
-						(varMap != null && varMap.getVarMap().containsKey(field.getName()))){
+						(varMap != null && varMap.getVarMap().containsKey(field.getName())) || (proMap != null)){
 					OWLDataProperty mDataProperty = null;
 					if(classToMap.equals("Parameter") && paramMap.getParamMap().containsKey(field.getName()))
 						mDataProperty = mFactory.getOWLDataProperty(":" + paramMap.getParamMap().get(field.getName()), prefixManager);
@@ -124,6 +131,9 @@ public class owlpopulation {
 					else if(classToMap.equals("Variable") &&
 							varMap.getVarMap().containsKey(field.getName()))
 						mDataProperty = mFactory.getOWLDataProperty(":" + varMap.getVarMap().get(field.getName()), prefixManager);
+					else if(classToMap.equals("ProjectionData") &&
+							proMap.getProMap().containsKey(field.getName()))
+						mDataProperty = mFactory.getOWLDataProperty(":" + proMap.getProMap().get(field.getName()), prefixManager);
 					
 					if(mDataProperty != null){
 						OWLAxiom axiom = null;
@@ -192,7 +202,8 @@ public class owlpopulation {
 	}
 
 	public void addObjectPropertyToOwl(List<Parameter> mParameterList, List<Model> mModelList,
-			List<Software> mSoftwareList, List<Person> mPersonList, List<Institution> mInstitutionList) {
+			List<Software> mSoftwareList, List<Person> mPersonList, List<Institution> mInstitutionList,
+			List<Variable> mVariableList, List<ProjectionData> mProjectionList) {
 		//create isMemberOf object property
 		if(!mInstitutionList.isEmpty() && !mPersonList.isEmpty()){
 			for(Person mPersonInstance : mPersonList){
@@ -220,6 +231,25 @@ public class owlpopulation {
 				OWLNamedIndividual parameterIndividual = mFactory.getOWLNamedIndividual(":" + mParameterInstance, prefixManager);
 				OWLObjectProperty hasInput = mFactory.getOWLObjectProperty(":hasInput", prefixManager);
 				OWLAxiom mAxiom = mFactory.getOWLObjectPropertyAssertionAxiom(hasInput, modelIndividual, parameterIndividual);
+				mManager.applyChange(new AddAxiom(mOWLFile, mAxiom));
+			}			
+		}
+		if(!mProjectionList.isEmpty() && !mModelList.isEmpty()){
+			for(ProjectionData mProjectionInstance : mProjectionList){
+				OWLNamedIndividual modelIndividual = mFactory.getOWLNamedIndividual(":" + mModelList.get(0), prefixManager);
+				OWLNamedIndividual projectionIndividual = mFactory.getOWLNamedIndividual(":" + mProjectionInstance, prefixManager);
+				OWLObjectProperty hasInput = mFactory.getOWLObjectProperty(":hasInput", prefixManager);
+				OWLAxiom mAxiom = mFactory.getOWLObjectPropertyAssertionAxiom(hasInput, modelIndividual, projectionIndividual);
+				mManager.applyChange(new AddAxiom(mOWLFile, mAxiom));
+			}			
+		}
+		//create hasOutput object property
+		if(!mVariableList.isEmpty() && !mModelList.isEmpty()){
+			for(Variable mVarInstance : mVariableList){
+				OWLNamedIndividual modelIndividual = mFactory.getOWLNamedIndividual(":" + mModelList.get(0), prefixManager);
+				OWLNamedIndividual varIndividual = mFactory.getOWLNamedIndividual(":" + mVarInstance, prefixManager);
+				OWLObjectProperty hasInput = mFactory.getOWLObjectProperty(":hasOutput", prefixManager);
+				OWLAxiom mAxiom = mFactory.getOWLObjectPropertyAssertionAxiom(hasInput, modelIndividual, varIndividual);
 				mManager.applyChange(new AddAxiom(mOWLFile, mAxiom));
 			}			
 		}
