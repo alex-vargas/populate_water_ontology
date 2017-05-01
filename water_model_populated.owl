@@ -142,12 +142,6 @@
         <DataProperty IRI="#hasVarName"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#hasVarStructDimension"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#hasVarStructType"/>
-    </Declaration>
-    <Declaration>
         <DataProperty IRI="#hasVarUnit"/>
     </Declaration>
     <Declaration>
@@ -232,6 +226,14 @@
         <Class IRI="#Simulation_software"/>
     </DisjointClasses>
     <ClassAssertion>
+        <Class IRI="#Variable"/>
+        <NamedIndividual IRI="#Ag_Ben_v"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Variable"/>
+        <NamedIndividual IRI="#Ag_use_v"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Person"/>
         <NamedIndividual IRI="#Alex_Mayer"/>
     </ClassAssertion>
@@ -250,6 +252,10 @@
     <ClassAssertion>
         <Class IRI="#Parameter"/>
         <NamedIndividual IRI="#Cost_p"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Variable"/>
+        <NamedIndividual IRI="#Env_ben_v"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Parameter"/>
@@ -276,12 +282,24 @@
         <NamedIndividual IRI="#Price_p"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Variable"/>
+        <NamedIndividual IRI="#Q_v"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Model"/>
         <NamedIndividual IRI="#RIO_GRANDE_BASIN_HYDROECONOMIC_PROTOTYPE"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Variable"/>
+        <NamedIndividual IRI="#X_v"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Parameter"/>
         <NamedIndividual IRI="#Yield_p"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Variable"/>
+        <NamedIndividual IRI="#Z_v"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Parameter"/>
@@ -314,6 +332,10 @@
     <ClassAssertion>
         <Class IRI="#Parameter"/>
         <NamedIndividual IRI="#qmax_p"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Variable"/>
+        <NamedIndividual IRI="#rec_ben_v"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Parameter"/>
@@ -358,6 +380,14 @@
     <ClassAssertion>
         <Class IRI="#Parameter"/>
         <NamedIndividual IRI="#urb_use_p"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Variable"/>
+        <NamedIndividual IRI="#urb_use_v"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Variable"/>
+        <NamedIndividual IRI="#urb_value_v"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Parameter"/>
@@ -555,6 +585,26 @@
         <NamedIndividual IRI="#The_General_Algebraic_Modeling_System_(GAMS)"/>
         <NamedIndividual IRI="#RIO_GRANDE_BASIN_HYDROECONOMIC_PROTOTYPE"/>
     </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasVarName"/>
+        <NamedIndividual IRI="#Ag_Ben_v"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Ag_Ben_v</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasVarUnit"/>
+        <NamedIndividual IRI="#Ag_Ben_v"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">$1000/yr</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasVarName"/>
+        <NamedIndividual IRI="#Ag_use_v"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Ag_use_v</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasVarUnit"/>
+        <NamedIndividual IRI="#Ag_use_v"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">1000 af/yr</Literal>
+    </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasEmail"/>
         <NamedIndividual IRI="#Alex_Mayer"/>
@@ -786,6 +836,16 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI"></Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#hasVarName"/>
+        <NamedIndividual IRI="#Env_ben_v"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Env_ben_v</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasVarUnit"/>
+        <NamedIndividual IRI="#Env_ben_v"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">$1000/yr</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#hasDataType"/>
         <NamedIndividual IRI="#Evap_rate_p"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">integer</Literal>
@@ -1011,6 +1071,16 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI"></Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#hasVarName"/>
+        <NamedIndividual IRI="#Q_v"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Q_v</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasVarUnit"/>
+        <NamedIndividual IRI="#Q_v"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">1000 af/yr</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#hasModelDescription"/>
         <NamedIndividual IRI="#RIO_GRANDE_BASIN_HYDROECONOMIC_PROTOTYPE"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Rio Grande Basin Model: Expandable Prototype. Contains essential elements of full Upper Rio Grande Basin Model.</Literal>
@@ -1049,6 +1119,16 @@
         <DataProperty IRI="#modelDateModified"/>
         <NamedIndividual IRI="#RIO_GRANDE_BASIN_HYDROECONOMIC_PROTOTYPE"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">2016-09-02T15:27:00-07:00</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasVarName"/>
+        <NamedIndividual IRI="#X_v"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">X_v</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasVarUnit"/>
+        <NamedIndividual IRI="#X_v"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">1000 af/yr</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasDataType"/>
@@ -1104,6 +1184,16 @@
         <DataProperty IRI="#hasValue"/>
         <NamedIndividual IRI="#Yield_p"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI"></Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasVarName"/>
+        <NamedIndividual IRI="#Z_v"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Z_v</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasVarUnit"/>
+        <NamedIndividual IRI="#Z_v"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">1000 af/yr</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasDataType"/>
@@ -1544,6 +1634,16 @@
         <DataProperty IRI="#hasValue"/>
         <NamedIndividual IRI="#qmax_p"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI"></Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasVarName"/>
+        <NamedIndividual IRI="#rec_ben_v"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">rec_ben_v</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasVarUnit"/>
+        <NamedIndividual IRI="#rec_ben_v"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">$1000/yr</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasDataType"/>
@@ -2151,6 +2251,26 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI"></Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#hasVarName"/>
+        <NamedIndividual IRI="#urb_use_v"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">urb_use_v</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasVarUnit"/>
+        <NamedIndividual IRI="#urb_use_v"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">1000 af/yr</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasVarName"/>
+        <NamedIndividual IRI="#urb_value_v"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">urb_value_v</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasVarUnit"/>
+        <NamedIndividual IRI="#urb_value_v"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">$1000/yr</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#hasDataType"/>
         <NamedIndividual IRI="#us_mx_1906_p"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">integer</Literal>
@@ -2507,9 +2627,6 @@
         <DataProperty IRI="#hasVarName"/>
     </FunctionalDataProperty>
     <FunctionalDataProperty>
-        <DataProperty IRI="#hasVarStructDimension"/>
-    </FunctionalDataProperty>
-    <FunctionalDataProperty>
         <DataProperty IRI="#hasVarUnit"/>
     </FunctionalDataProperty>
     <FunctionalDataProperty>
@@ -2631,14 +2748,6 @@
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#hasVarName"/>
-        <Class IRI="#Variable"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#hasVarStructDimension"/>
-        <Class IRI="#Variable"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#hasVarStructType"/>
         <Class IRI="#Variable"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
@@ -2770,14 +2879,6 @@
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="#hasVarStructDimension"/>
-        <Datatype abbreviatedIRI="xsd:int"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#hasVarStructType"/>
-        <Datatype abbreviatedIRI="xsd:string"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
         <DataProperty IRI="#hasVarUnit"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
@@ -2793,6 +2894,16 @@
         <DataProperty IRI="#modelDateModified"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Ag_Ben_v</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Farm Income</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Ag_use_v</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Irrigation Surface Water Use</Literal>
+    </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#B1_area_vol_p</IRI>
@@ -2815,6 +2926,11 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Env_ben_v</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Environmental Benefits</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Evap_rate_p</IRI>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Reservoir evaporation (feet loss per exposed acre)</Literal>
     </AnnotationAssertion>
@@ -2830,8 +2946,23 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Q_v</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Aquifer Storage Volume</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#X_v</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Flows -- all kinds</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Yield_p</IRI>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Crop Yield</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Z_v</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Water Stocks -- Reservoirs</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -2872,6 +3003,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#qmax_p</IRI>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Maximum storage capacity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#rec_ben_v</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Reservoir Recreational Benefits</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -2927,6 +3063,16 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#urb_use_p</IRI>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Urban base water use</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#urb_use_v</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Urban Water Use</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#urb_value_v</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Urban Net Benefits</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>

@@ -17,6 +17,7 @@ import utep.cybershare.populate_water_ontology.classes.Parameter;
 import utep.cybershare.populate_water_ontology.classes.Person;
 import utep.cybershare.populate_water_ontology.classes.PersonList;
 import utep.cybershare.populate_water_ontology.classes.Software;
+import utep.cybershare.populate_water_ontology.classes.Variable;
 import utep.cybershare.populate_water_ontology.classes.mList;
 
 /**
@@ -29,24 +30,28 @@ public class App
 	private static List<Institution> mInstitutionList;
 	private static List<Person> mPersonList;
 	private static List<Parameter> mParameterList;
+	private static List<Variable> mVariableList;
 	private static List<Model> mModelList;
 	private static List<Software> mSoftwareList;
 	
     public static void main( String[] args ) throws OWLOntologyCreationException
     {
-    	mInstitutionList = new ArrayList();
-    	mPersonList = new ArrayList();
-    	mParameterList = new ArrayList();
-    	mModelList = new ArrayList();
-    	mSoftwareList = new ArrayList();
+    	mInstitutionList = new ArrayList<Institution>();
+    	mPersonList = new ArrayList<Person>();
+    	mParameterList = new ArrayList<Parameter>();
+    	mModelList = new ArrayList<Model>();
+    	mSoftwareList = new ArrayList<Software>();
+    	mVariableList = new ArrayList<Variable>();
     	
 		mOwl = new owlpopulation();
 		String bucketMetaFilePath = "C:\\jsonParserCI\\bucket-meta-v2.json";
 		String parametersFilePath = "C:\\jsonParserCI\\paramTest.json";
+		String variablesFilePath = "C:\\jsonParserCI\\varTest.json";
 
     	populate("Institution", bucketMetaFilePath);
     	populate("Person", bucketMetaFilePath);
     	populate("Parameter", parametersFilePath);
+    	populate("Variable", variablesFilePath);
     	populate("Model", bucketMetaFilePath);
     	populate("Simulation_software", bucketMetaFilePath);
     	populate(null, null);
@@ -99,6 +104,12 @@ public class App
 						mListObjects.add(institution);
 						mInstitutionList.add(institution);
 					}
+				}
+			}else if(className.equals("Variable")){
+				Variable[] result = g.fromJson(reader, Variable[].class);
+				for(Variable variable : result){
+					mListObjects.add(variable);
+					mVariableList.add(variable);
 				}
 			}
 	    				

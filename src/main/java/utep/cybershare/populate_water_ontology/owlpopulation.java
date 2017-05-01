@@ -30,11 +30,13 @@ import utep.cybershare.populate_water_ontology.classes.Model;
 import utep.cybershare.populate_water_ontology.classes.Parameter;
 import utep.cybershare.populate_water_ontology.classes.Person;
 import utep.cybershare.populate_water_ontology.classes.Software;
+import utep.cybershare.populate_water_ontology.classes.Variable;
 import utep.cybershare.populate_water_ontology.mapping.InstitutionMapping;
 import utep.cybershare.populate_water_ontology.mapping.ModelMapping;
 import utep.cybershare.populate_water_ontology.mapping.ParamMapping;
 import utep.cybershare.populate_water_ontology.mapping.PersonMapping;
 import utep.cybershare.populate_water_ontology.mapping.SoftwareMapping;
+import utep.cybershare.populate_water_ontology.mapping.VariableMapping;
 
 public class owlpopulation {
 	String ontFile;
@@ -70,6 +72,8 @@ public class owlpopulation {
 			mIndividual = mIndividual = mFactory.getOWLNamedIndividual(":" + (Person) mObj, prefixManager);
 		else if(classToMap.equals("Institution"))
 			mIndividual = mIndividual = mFactory.getOWLNamedIndividual(":" + (Institution) mObj, prefixManager);
+		else if(classToMap.equals("Variable"))
+			mIndividual = mIndividual = mFactory.getOWLNamedIndividual(":" + (Variable) mObj, prefixManager);
 		
 		addIndAxiom(mIndividual, classToMap);
 		addDataProperty(mObj, mIndividual, classToMap);
@@ -82,6 +86,7 @@ public class owlpopulation {
 		SoftwareMapping softwareMap = null;
 		PersonMapping personMap = null;
 		InstitutionMapping institutionMap = null;
+		VariableMapping varMap = null;
 		
 		if(classToMap.equals("Parameter"))
 			paramMap = new ParamMapping();
@@ -93,13 +98,16 @@ public class owlpopulation {
 			personMap = new PersonMapping();
 		else if(classToMap.equals("Institution"))
 			institutionMap = new InstitutionMapping();
+		else if(classToMap.equals("Variable"))
+			varMap = new VariableMapping();
 
 		for(Field field : clazz.getDeclaredFields()) {
 			field.setAccessible(true);
 
 			try {
 				if((paramMap != null && paramMap.getParamMap().containsKey(field.getName())) || 
-						(modelMap != null) || (softwareMap != null) || (personMap != null) || (institutionMap != null)){
+						(modelMap != null) || (softwareMap != null) || (personMap != null) || (institutionMap != null) ||
+						(varMap != null && varMap.getVarMap().containsKey(field.getName()))){
 					OWLDataProperty mDataProperty = null;
 					if(classToMap.equals("Parameter") && paramMap.getParamMap().containsKey(field.getName()))
 						mDataProperty = mFactory.getOWLDataProperty(":" + paramMap.getParamMap().get(field.getName()), prefixManager);
@@ -113,6 +121,9 @@ public class owlpopulation {
 					else if(classToMap.equals("Institution") &&
 							institutionMap.getInstitutionMap().containsKey(field.getName()))
 						mDataProperty = mFactory.getOWLDataProperty(":" + institutionMap.getInstitutionMap().get(field.getName()), prefixManager);
+					else if(classToMap.equals("Variable") &&
+							varMap.getVarMap().containsKey(field.getName()))
+						mDataProperty = mFactory.getOWLDataProperty(":" + varMap.getVarMap().get(field.getName()), prefixManager);
 					
 					if(mDataProperty != null){
 						OWLAxiom axiom = null;
@@ -136,7 +147,7 @@ public class owlpopulation {
 						axiom = mFactory.getOWLDataPropertyAssertionAxiom(mDataProperty, mIndividual, dataLiteral);
 						mManager.applyChange(new AddAxiom(mOWLFile, axiom));
 					}
-				} else if(field.getName().equals("paramLabel")){
+				} else if(field.getName().equals("paramLabel") || field.getName().equals("varLabel")){
 					OWLAnnotation mAnnotationLabel = mFactory.getOWLAnnotation(mFactory.getOWLAnnotationProperty(OWLRDFVocabulary.RDFS_LABEL.getIRI()),
 							mFactory.getOWLLiteral((String) field.get(mObj)));
 					OWLAxiom axiom = mFactory.getOWLAnnotationAssertionAxiom(mIndividual.getIRI(), mAnnotationLabel);
