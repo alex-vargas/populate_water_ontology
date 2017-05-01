@@ -1,14 +1,12 @@
 package utep.cybershare.populate_water_ontology.classes;
 
-import java.sql.Timestamp;
-
 public class Model {
 	
-	int id;
+	int _id;
 	String modelName;
 	String modelDescription;
-	Timestamp dateCreated;
-	Timestamp dateModified;
+	String dateCreated;
+	String dateModified;
 //	String softwareAgent;
 	String license;
 	float version;
@@ -19,10 +17,10 @@ public class Model {
 	}
 	
 	public int get_id() {
-		return id;
+		return _id;
 	}
 	public void set_id(int _id) {
-		this.id = _id;
+		this._id = _id;
 	}
 	public String getModelName() {
 		return modelName;
@@ -36,16 +34,16 @@ public class Model {
 	public void setModelDescription(String modelDescription) {
 		this.modelDescription = modelDescription;
 	}
-	public Timestamp getDateCreated() {
+	public String getDateCreated() {
 		return dateCreated;
 	}
-	public void setDateCreated(Timestamp dateCreated) {
+	public void setDateCreated(String dateCreated) {
 		this.dateCreated = dateCreated;
 	}
-	public Timestamp getDateModified() {
+	public String getDateModified() {
 		return dateModified;
 	}
-	public void setDateModified(Timestamp dateModified) {
+	public void setDateModified(String dateModified) {
 		this.dateModified = dateModified;
 	}
 //	public String getSoftwareAgent() {

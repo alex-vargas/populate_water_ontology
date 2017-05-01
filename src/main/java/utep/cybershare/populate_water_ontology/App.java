@@ -101,12 +101,11 @@ public class App
 					}
 				}
 			}
-	    	
-			
-			
+	    				
 			if(mListObjects.size() > 0)
 				for(Object mObject : mListObjects)
 					mOwl.addIndividualToOwl(mObject, className);
+			
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		} catch (java.lang.IllegalStateException e){

@@ -101,47 +101,41 @@ public class owlpopulation {
 				if((paramMap != null && paramMap.getParamMap().containsKey(field.getName())) || 
 						(modelMap != null) || (softwareMap != null) || (personMap != null) || (institutionMap != null)){
 					OWLDataProperty mDataProperty = null;
-					if(classToMap.equals("Parameter")){
-						if(!paramMap.getParamMap().containsKey(field.getName()))
-							return;
+					if(classToMap.equals("Parameter") && paramMap.getParamMap().containsKey(field.getName()))
 						mDataProperty = mFactory.getOWLDataProperty(":" + paramMap.getParamMap().get(field.getName()), prefixManager);
-					} else if(classToMap.equals("Model")){
-						if(!modelMap.getModelMap().containsKey(field.getName()))
-							return;
+					else if(classToMap.equals("Model") && modelMap.getModelMap().containsKey(field.getName()))
 						mDataProperty = mFactory.getOWLDataProperty(":" + modelMap.getModelMap().get(field.getName()), prefixManager);
-					} else if(classToMap.equals("Simulation_software")){
-						if(!softwareMap.getSoftwareMap().containsKey(field.getName()))
-							return;
+					else if(classToMap.equals("Simulation_software") && 
+							softwareMap.getSoftwareMap().containsKey(field.getName()))
 						mDataProperty = mFactory.getOWLDataProperty(":" + softwareMap.getSoftwareMap().get(field.getName()), prefixManager);
-					} else if(classToMap.equals("Person")){
-						if(!personMap.getPersonMap().containsKey(field.getName()))
-							return;
+					else if(classToMap.equals("Person") && personMap.getPersonMap().containsKey(field.getName()))
 						mDataProperty = mFactory.getOWLDataProperty(":" + personMap.getPersonMap().get(field.getName()), prefixManager);
-					} else if(classToMap.equals("Institution")){
-						if(!institutionMap.getInstitutionMap().containsKey(field.getName()))
-							return;
+					else if(classToMap.equals("Institution") &&
+							institutionMap.getInstitutionMap().containsKey(field.getName()))
 						mDataProperty = mFactory.getOWLDataProperty(":" + institutionMap.getInstitutionMap().get(field.getName()), prefixManager);
-					}
-					OWLAxiom axiom = null;
 					
-					OWLLiteral dataLiteral = null;
-
-							
-					if(field.getType().getSimpleName().toString().equals("String"))
-						dataLiteral = mFactory.getOWLLiteral(field.get(mObj).toString(),OWL2Datatype.XSD_STRING);
-					else if(field.getType().getSimpleName().toString().equals("float"))
-						dataLiteral = mFactory.getOWLLiteral(field.get(mObj).toString(),OWL2Datatype.XSD_DECIMAL);
-					else if(field.getType().getSimpleName().toString().equals("int"))
-						dataLiteral = mFactory.getOWLLiteral(field.get(mObj).toString(),OWL2Datatype.XSD_INT);
-					else if(field.getType().getSimpleName().toString().equals("URI"))
-						dataLiteral = mFactory.getOWLLiteral(field.get(mObj).toString(),OWL2Datatype.XSD_ANY_URI);
-					else if(field.getType().getSimpleName().toString().equals("Date"))
-						dataLiteral = mFactory.getOWLLiteral(field.get(mObj).toString(),OWL2Datatype.XSD_DATE_TIME);
-					else if(field.getType().getSimpleName().toString().equals("Timestamp"))
-						dataLiteral = mFactory.getOWLLiteral(field.get(mObj).toString(),OWL2Datatype.XSD_DATE_TIME_STAMP);
-
-					axiom = mFactory.getOWLDataPropertyAssertionAxiom(mDataProperty, mIndividual, dataLiteral);
-					mManager.applyChange(new AddAxiom(mOWLFile, axiom));
+					if(mDataProperty != null){
+						OWLAxiom axiom = null;
+						
+						OWLLiteral dataLiteral = null;
+	
+								
+						if(field.getType().getSimpleName().toString().equals("String"))
+							dataLiteral = mFactory.getOWLLiteral(field.get(mObj).toString(),OWL2Datatype.XSD_STRING);
+						else if(field.getType().getSimpleName().toString().equals("float"))
+							dataLiteral = mFactory.getOWLLiteral(field.get(mObj).toString(),OWL2Datatype.XSD_DECIMAL);
+						else if(field.getType().getSimpleName().toString().equals("int"))
+							dataLiteral = mFactory.getOWLLiteral(field.get(mObj).toString(),OWL2Datatype.XSD_INT);
+						else if(field.getType().getSimpleName().toString().equals("URI"))
+							dataLiteral = mFactory.getOWLLiteral(field.get(mObj).toString(),OWL2Datatype.XSD_ANY_URI);
+						else if(field.getType().getSimpleName().toString().equals("Date"))
+							dataLiteral = mFactory.getOWLLiteral(field.get(mObj).toString(),OWL2Datatype.XSD_DATE_TIME);
+						else if(field.getType().getSimpleName().toString().equals("Timestamp"))
+							dataLiteral = mFactory.getOWLLiteral(field.get(mObj).toString(),OWL2Datatype.XSD_DATE_TIME_STAMP);
+	
+						axiom = mFactory.getOWLDataPropertyAssertionAxiom(mDataProperty, mIndividual, dataLiteral);
+						mManager.applyChange(new AddAxiom(mOWLFile, axiom));
+					}
 				} else if(field.getName().equals("paramLabel")){
 					OWLAnnotation mAnnotationLabel = mFactory.getOWLAnnotation(mFactory.getOWLAnnotationProperty(OWLRDFVocabulary.RDFS_LABEL.getIRI()),
 							mFactory.getOWLLiteral((String) field.get(mObj)));

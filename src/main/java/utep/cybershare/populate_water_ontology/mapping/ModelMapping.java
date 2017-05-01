@@ -8,9 +8,9 @@ public class ModelMapping {
 	public ModelMapping(){
 		modelMap = new HashMap<String, String>();
 		
-		modelMap.put("id", "hasModelID");
+		modelMap.put("_id", "hasModelID");
 		modelMap.put("modelName", "hasModelName");
-//		modelMap.put("modelDescription", "sdfsdfsd");
+		modelMap.put("modelDescription", "hasModelDescription");
 		modelMap.put("dateCreated", "modelDateCreated");
 		modelMap.put("dateModified", "modelDateModified");
 //		modelMap.put("softwareAgent", "sdfsdfsd");

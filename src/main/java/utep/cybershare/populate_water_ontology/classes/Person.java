@@ -2,9 +2,9 @@ package utep.cybershare.populate_water_ontology.classes;
 
 public class Person {
 
+	String organization;
 	String name;
 	String email;
-	String organization;
 	
 	//Not to be mapped to owl
 	public String getOrganization() {

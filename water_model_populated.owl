@@ -22,6 +22,9 @@
         <Class IRI="#Institution"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Model"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Output"/>
     </Declaration>
     <Declaration>
@@ -35,9 +38,6 @@
     </Declaration>
     <Declaration>
         <Class IRI="#Variable"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="-23#Model"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasInput"/>
@@ -94,6 +94,9 @@
         <DataProperty IRI="#hasMinValue"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="#hasModelDescription"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="#hasModelID"/>
     </Declaration>
     <Declaration>
@@ -136,11 +139,30 @@
         <DataProperty IRI="#hasValue"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="#hasVarName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasVarStructDimension"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasVarStructType"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasVarUnit"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasVarValue"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="#modelDateCreated"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#modelDateModified"/>
     </Declaration>
+    <SubClassOf>
+        <Class IRI="#Model"/>
+        <Class IRI="http://semanticscience.org/resource/SIO_000510"/>
+    </SubClassOf>
     <SubClassOf>
         <Class IRI="#Parameter"/>
         <Class IRI="#Input"/>
@@ -149,13 +171,13 @@
         <Class IRI="#Variable"/>
         <Class IRI="#Output"/>
     </SubClassOf>
-    <SubClassOf>
-        <Class IRI="-23#Model"/>
-        <Class IRI="http://semanticscience.org/resource/SIO_000510"/>
-    </SubClassOf>
     <DisjointClasses>
         <Class IRI="#Input"/>
         <Class IRI="#Institution"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Input"/>
+        <Class IRI="#Model"/>
     </DisjointClasses>
     <DisjointClasses>
         <Class IRI="#Input"/>
@@ -170,8 +192,8 @@
         <Class IRI="#Simulation_software"/>
     </DisjointClasses>
     <DisjointClasses>
-        <Class IRI="#Input"/>
-        <Class IRI="-23#Model"/>
+        <Class IRI="#Institution"/>
+        <Class IRI="#Model"/>
     </DisjointClasses>
     <DisjointClasses>
         <Class IRI="#Institution"/>
@@ -186,8 +208,16 @@
         <Class IRI="#Simulation_software"/>
     </DisjointClasses>
     <DisjointClasses>
-        <Class IRI="#Institution"/>
-        <Class IRI="-23#Model"/>
+        <Class IRI="#Model"/>
+        <Class IRI="#Output"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Model"/>
+        <Class IRI="#Person"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Model"/>
+        <Class IRI="#Simulation_software"/>
     </DisjointClasses>
     <DisjointClasses>
         <Class IRI="#Output"/>
@@ -198,20 +228,8 @@
         <Class IRI="#Simulation_software"/>
     </DisjointClasses>
     <DisjointClasses>
-        <Class IRI="#Output"/>
-        <Class IRI="-23#Model"/>
-    </DisjointClasses>
-    <DisjointClasses>
         <Class IRI="#Person"/>
         <Class IRI="#Simulation_software"/>
-    </DisjointClasses>
-    <DisjointClasses>
-        <Class IRI="#Person"/>
-        <Class IRI="-23#Model"/>
-    </DisjointClasses>
-    <DisjointClasses>
-        <Class IRI="#Simulation_software"/>
-        <Class IRI="-23#Model"/>
     </DisjointClasses>
     <ClassAssertion>
         <Class IRI="#Person"/>
@@ -993,14 +1011,44 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI"></Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#hasModelDescription"/>
+        <NamedIndividual IRI="#RIO_GRANDE_BASIN_HYDROECONOMIC_PROTOTYPE"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Rio Grande Basin Model: Expandable Prototype. Contains essential elements of full Upper Rio Grande Basin Model.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#hasModelID"/>
         <NamedIndividual IRI="#RIO_GRANDE_BASIN_HYDROECONOMIC_PROTOTYPE"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">0</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasModelLicense"/>
+        <NamedIndividual IRI="#RIO_GRANDE_BASIN_HYDROECONOMIC_PROTOTYPE"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Creative Commons Version 4.0</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasModelName"/>
         <NamedIndividual IRI="#RIO_GRANDE_BASIN_HYDROECONOMIC_PROTOTYPE"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">RIO GRANDE BASIN HYDROECONOMIC PROTOTYPE</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasModelSponsor"/>
+        <NamedIndividual IRI="#RIO_GRANDE_BASIN_HYDROECONOMIC_PROTOTYPE"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">USDA NIFA 5 year grant beginning March 2015</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasModelVersion"/>
+        <NamedIndividual IRI="#RIO_GRANDE_BASIN_HYDROECONOMIC_PROTOTYPE"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">2.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#modelDateCreated"/>
+        <NamedIndividual IRI="#RIO_GRANDE_BASIN_HYDROECONOMIC_PROTOTYPE"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">2016-09-02T00:00:00-07:00</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#modelDateModified"/>
+        <NamedIndividual IRI="#RIO_GRANDE_BASIN_HYDROECONOMIC_PROTOTYPE"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">2016-09-02T15:27:00-07:00</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasDataType"/>
@@ -2320,15 +2368,15 @@
     </IrreflexiveObjectProperty>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasInput"/>
-        <Class IRI="-23#Model"/>
+        <Class IRI="#Model"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasModelCreator"/>
-        <Class IRI="-23#Model"/>
+        <Class IRI="#Model"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasOutput"/>
-        <Class IRI="-23#Model"/>
+        <Class IRI="#Model"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#isMemberOf"/>
@@ -2336,7 +2384,7 @@
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#isSimulatedBy"/>
-        <Class IRI="-23#Model"/>
+        <Class IRI="#Model"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#runsA"/>
@@ -2364,7 +2412,7 @@
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#runsA"/>
-        <Class IRI="-23#Model"/>
+        <Class IRI="#Model"/>
     </ObjectPropertyRange>
     <SubDataPropertyOf>
         <DataProperty IRI="#hasCity"/>
@@ -2411,6 +2459,9 @@
         <DataProperty IRI="#hasMinValue"/>
     </FunctionalDataProperty>
     <FunctionalDataProperty>
+        <DataProperty IRI="#hasModelDescription"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
         <DataProperty IRI="#hasModelID"/>
     </FunctionalDataProperty>
     <FunctionalDataProperty>
@@ -2453,6 +2504,18 @@
         <DataProperty IRI="#hasValue"/>
     </FunctionalDataProperty>
     <FunctionalDataProperty>
+        <DataProperty IRI="#hasVarName"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#hasVarStructDimension"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#hasVarUnit"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#hasVarValue"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
         <DataProperty IRI="#modelDateCreated"/>
     </FunctionalDataProperty>
     <FunctionalDataProperty>
@@ -2491,88 +2554,108 @@
         <Class IRI="#Parameter"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="#hasDescription"/>
+        <DataProperty IRI="#hasEmail"/>
+        <Class IRI="#Person"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasInstitutionName"/>
+        <Class IRI="#Institution"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasMaxValue"/>
+        <Class IRI="#Parameter"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasMinValue"/>
+        <Class IRI="#Parameter"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasModelDescription"/>
+        <Class IRI="#Model"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasModelID"/>
+        <Class IRI="#Model"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasModelLicense"/>
+        <Class IRI="#Model"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasModelName"/>
+        <Class IRI="#Model"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasModelSponsor"/>
+        <Class IRI="#Model"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasModelVersion"/>
+        <Class IRI="#Model"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasName"/>
+        <Class IRI="#Person"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasParamName"/>
+        <Class IRI="#Parameter"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasState"/>
+        <Class IRI="#Institution"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasStructDimension"/>
+        <Class IRI="#Parameter"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasStructType"/>
+        <Class IRI="#Parameter"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasSwName"/>
+        <Class IRI="#Simulation_software"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasSwVersion"/>
+        <Class IRI="#Simulation_software"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasUnit"/>
+        <Class IRI="#Parameter"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasValue"/>
+        <Class IRI="#Parameter"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasVarName"/>
         <Class IRI="#Variable"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="#hasEmail"/>
-        <Class IRI="#Person"/>
+        <DataProperty IRI="#hasVarStructDimension"/>
+        <Class IRI="#Variable"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="#hasInstitutionName"/>
-        <Class IRI="#Institution"/>
+        <DataProperty IRI="#hasVarStructType"/>
+        <Class IRI="#Variable"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="#hasMaxValue"/>
-        <Class IRI="#Parameter"/>
+        <DataProperty IRI="#hasVarUnit"/>
+        <Class IRI="#Variable"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="#hasMinValue"/>
-        <Class IRI="#Parameter"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#hasModelID"/>
-        <Class IRI="-23#Model"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#hasModelLicense"/>
-        <Class IRI="-23#Model"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#hasModelName"/>
-        <Class IRI="-23#Model"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#hasModelSponsor"/>
-        <Class IRI="-23#Model"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#hasModelVersion"/>
-        <Class IRI="-23#Model"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#hasName"/>
-        <Class IRI="#Person"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#hasParamName"/>
-        <Class IRI="#Parameter"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#hasState"/>
-        <Class IRI="#Institution"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#hasStructDimension"/>
-        <Class IRI="#Parameter"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#hasStructType"/>
-        <Class IRI="#Parameter"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#hasSwName"/>
-        <Class IRI="#Simulation_software"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#hasSwVersion"/>
-        <Class IRI="#Simulation_software"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#hasUnit"/>
-        <Class IRI="#Parameter"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#hasValue"/>
-        <Class IRI="#Parameter"/>
+        <DataProperty IRI="#hasVarValue"/>
+        <Class IRI="#Variable"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#modelDateCreated"/>
-        <Class IRI="-23#Model"/>
+        <Class IRI="#Model"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#modelDateModified"/>
-        <Class IRI="-23#Model"/>
+        <Class IRI="#Model"/>
     </DataPropertyDomain>
     <DataPropertyRange>
         <DataProperty IRI="#hasCity"/>
@@ -2623,6 +2706,10 @@
         <Datatype abbreviatedIRI="xsd:int"/>
     </DataPropertyRange>
     <DataPropertyRange>
+        <DataProperty IRI="#hasModelDescription"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
         <DataProperty IRI="#hasModelID"/>
         <Datatype abbreviatedIRI="xsd:int"/>
     </DataPropertyRange>
@@ -2679,12 +2766,32 @@
         <Datatype abbreviatedIRI="xsd:anyURI"/>
     </DataPropertyRange>
     <DataPropertyRange>
+        <DataProperty IRI="#hasVarName"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasVarStructDimension"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasVarStructType"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasVarUnit"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasVarValue"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
         <DataProperty IRI="#modelDateCreated"/>
-        <Datatype abbreviatedIRI="xsd:dateTime"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#modelDateModified"/>
-        <Datatype abbreviatedIRI="xsd:dateTime"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
