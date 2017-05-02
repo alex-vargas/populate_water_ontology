@@ -116,7 +116,8 @@ public class owlpopulation {
 						(modelMap != null) || (softwareMap != null) || (personMap != null) || (institutionMap != null) ||
 						(varMap != null && varMap.getVarMap().containsKey(field.getName())) || (proMap != null)){
 					OWLDataProperty mDataProperty = null;
-					if(classToMap.equals("Parameter") && paramMap.getParamMap().containsKey(field.getName()))
+					if(classToMap.equals("Parameter") && paramMap.getParamMap().containsKey(field.getName()) &&
+							field.get(mObj) != null)
 						mDataProperty = mFactory.getOWLDataProperty(":" + paramMap.getParamMap().get(field.getName()), prefixManager);
 					else if(classToMap.equals("Model") && modelMap.getModelMap().containsKey(field.getName()))
 						mDataProperty = mFactory.getOWLDataProperty(":" + modelMap.getModelMap().get(field.getName()), prefixManager);

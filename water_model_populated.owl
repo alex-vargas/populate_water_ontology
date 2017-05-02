@@ -12,143 +12,61 @@
     <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
     <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Import>http://semanticscience.org/ontology/sio/v1.36.0/sio-release.owl</Import>
+    <Import>http://www.w3.org/ns/prov-o-20130430</Import>
     <Declaration>
-        <Class IRI="http://semanticscience.org/resource/SIO_000510"/>
+        <DataProperty IRI="#hasParamName"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Input"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Institution"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Model"/>
+        <DataProperty IRI="#modelDateModified"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Output"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Parameter"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Person"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#ProjectionData"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Simulation_software"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Variable"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#hasInput"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#hasModelCreator"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#hasOutput"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#isMemberOf"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#isSimulatedBy"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#runsA"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#hasCity"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#hasClimateSelection"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#hasCountry"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#hasDataType"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#hasDefaultSource"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#hasDefaultValue"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#hasDefinitionType"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#hasDepartment"/>
+        <Class IRI="http://www.w3.org/ns/prov#Bundle"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#hasDescription"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#hasEmail"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#hasHumanIntervention"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#hasInstitutionName"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#hasMaxValue"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#hasMinValue"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#hasModelDescription"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#hasModelID"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#hasModelLicense"/>
+        <DataProperty IRI="#hasName"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#hasModelName"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#hasModelCreator"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasDefaultSource"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ProjectionData"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="#hasModelSponsor"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#hasModelVersion"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#hasName"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#hasParamName"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#hasState"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#hasStructDimension"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#hasStructType"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#hasSwName"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#hasSwVersion"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#hasUnit"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#hasValue"/>
-    </Declaration>
-    <Declaration>
         <DataProperty IRI="#hasVarName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasModelDescription"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasOutput"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasDataType"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://semanticscience.org/resource/SIO_000510"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasCountry"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Institution"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#hasVarUnit"/>
@@ -157,22 +75,292 @@
         <DataProperty IRI="#hasVarValue"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="#hasMaxValue"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasModelID"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasModelVersion"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#runsA"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasDefinitionType"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasDepartment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/ns/prov#Entity"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasMinValue"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasParamClassification"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="#modelDateCreated"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#modelDateModified"/>
+        <ObjectProperty IRI="#isMemberOf"/>
     </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasDefaultValue"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasEmail"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Parameter"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasInstitutionName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasCity"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasModelLicense"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isSimulatedBy"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasState"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasHumanIntervention"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Model"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasClimateSelection"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/ns/prov#SoftwareAgent"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasValue"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Variable"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasStructDimension"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasSwVersion"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/ns/prov#Organization"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasSwName"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Simulation_software"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasUnit"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/contributor"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasStructType"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Input"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Person"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/ns/prov#Person"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasInput"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#New_Mexico_State_University"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AveraBusin"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#B1_area_vol_p"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#rho_pop_p"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Q_v"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Cost_p"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#z0_p"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Ag_use_v"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Yield_p"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#urb_gw_cost_grow_p"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#urb_gw_pump_capacity_p"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ag_gw_pump_capacity_p"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#sw_sustain_p"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Z_v"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#BC_p"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#B2_area_volsq_p"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#land_p"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Env_ben_v"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#urb_cost_grow_p"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#urb_av_cost0_p"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#LANDRHS_p"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#urb_use_p"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#urb_use_v"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#urb_value_v"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Frank_Ward"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Alex_Mayer"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#RIO_GRANDE_BASIN_HYDROECONOMIC_PROTOTYPE"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#qmax_p"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#urb_av_gw_cost0_p"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#The_General_Algebraic_Modeling_System_(GAMS)"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#pop0_p"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Ag_Ben_v"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Evap_rate_p"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#X_v"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#rec_ben_v"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ag_av_gw_cost_p"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Price_p"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#q0_p"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#tx_proj_op_p"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#gw_sustain_p"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Michigan_Tech_University"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#us_mx_1906_p"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#urb_price_p"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#zmax_p"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#elast_p"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#source_p"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#Input"/>
+        <Class IRI="http://www.w3.org/ns/prov#Bundle"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Institution"/>
+        <Class IRI="http://www.w3.org/ns/prov#Organization"/>
+    </SubClassOf>
     <SubClassOf>
         <Class IRI="#Model"/>
         <Class IRI="http://semanticscience.org/resource/SIO_000510"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Model"/>
+        <Class IRI="http://www.w3.org/ns/prov#Entity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Output"/>
+        <Class IRI="http://www.w3.org/ns/prov#Bundle"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Parameter"/>
         <Class IRI="#Input"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Person"/>
+        <Class IRI="http://www.w3.org/ns/prov#Person"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#ProjectionData"/>
         <Class IRI="#Input"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Simulation_software"/>
+        <Class IRI="http://www.w3.org/ns/prov#SoftwareAgent"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Variable"/>
@@ -892,6 +1080,11 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">0</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#hasParamClassification"/>
+        <NamedIndividual IRI="#Cost_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Agriculture</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#hasParamName"/>
         <NamedIndividual IRI="#Cost_p"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Cost_p</Literal>
@@ -1127,6 +1320,11 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">0</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#hasParamClassification"/>
+        <NamedIndividual IRI="#Price_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Agriculture</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#hasParamName"/>
         <NamedIndividual IRI="#Price_p"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Price_p</Literal>
@@ -1242,6 +1440,11 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">0</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#hasParamClassification"/>
+        <NamedIndividual IRI="#Yield_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Agriculture</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#hasParamName"/>
         <NamedIndividual IRI="#Yield_p"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Yield_p</Literal>
@@ -1307,6 +1510,11 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">0</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#hasParamClassification"/>
+        <NamedIndividual IRI="#ag_av_gw_cost_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Agriculture</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#hasParamName"/>
         <NamedIndividual IRI="#ag_av_gw_cost_p"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">ag_av_gw_cost_p</Literal>
@@ -1360,6 +1568,11 @@
         <DataProperty IRI="#hasMinValue"/>
         <NamedIndividual IRI="#ag_gw_pump_capacity_p"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasParamClassification"/>
+        <NamedIndividual IRI="#ag_gw_pump_capacity_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Agriculture</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasParamName"/>
@@ -1417,6 +1630,11 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">-1</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#hasParamClassification"/>
+        <NamedIndividual IRI="#elast_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Urban</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#hasParamName"/>
         <NamedIndividual IRI="#elast_p"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">elast_p</Literal>
@@ -1470,6 +1688,11 @@
         <DataProperty IRI="#hasMinValue"/>
         <NamedIndividual IRI="#gw_sustain_p"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasParamClassification"/>
+        <NamedIndividual IRI="#gw_sustain_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Storage</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasParamName"/>
@@ -1527,6 +1750,11 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">0</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#hasParamClassification"/>
+        <NamedIndividual IRI="#land_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Agriculture</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#hasParamName"/>
         <NamedIndividual IRI="#land_p"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">land_p</Literal>
@@ -1580,6 +1808,11 @@
         <DataProperty IRI="#hasMinValue"/>
         <NamedIndividual IRI="#pop0_p"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasParamClassification"/>
+        <NamedIndividual IRI="#pop0_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Urban</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasParamName"/>
@@ -1757,6 +1990,11 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">0</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#hasParamClassification"/>
+        <NamedIndividual IRI="#rho_pop_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Urban</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#hasParamName"/>
         <NamedIndividual IRI="#rho_pop_p"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">rho_pop_p</Literal>
@@ -1867,6 +2105,11 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">0</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#hasParamClassification"/>
+        <NamedIndividual IRI="#sw_sustain_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Storage</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#hasParamName"/>
         <NamedIndividual IRI="#sw_sustain_p"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">sw_sustain_p</Literal>
@@ -1920,6 +2163,11 @@
         <DataProperty IRI="#hasMinValue"/>
         <NamedIndividual IRI="#tx_proj_op_p"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasParamClassification"/>
+        <NamedIndividual IRI="#tx_proj_op_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Policies</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasParamName"/>
@@ -1977,6 +2225,11 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">0</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#hasParamClassification"/>
+        <NamedIndividual IRI="#urb_av_cost0_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Urban</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#hasParamName"/>
         <NamedIndividual IRI="#urb_av_cost0_p"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">urb_av_cost0_p</Literal>
@@ -2030,6 +2283,11 @@
         <DataProperty IRI="#hasMinValue"/>
         <NamedIndividual IRI="#urb_av_gw_cost0_p"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasParamClassification"/>
+        <NamedIndividual IRI="#urb_av_gw_cost0_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Urban</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasParamName"/>
@@ -2087,6 +2345,11 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">0</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#hasParamClassification"/>
+        <NamedIndividual IRI="#urb_cost_grow_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Urban</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#hasParamName"/>
         <NamedIndividual IRI="#urb_cost_grow_p"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">urb_cost_grow_p</Literal>
@@ -2140,6 +2403,11 @@
         <DataProperty IRI="#hasMinValue"/>
         <NamedIndividual IRI="#urb_gw_cost_grow_p"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasParamClassification"/>
+        <NamedIndividual IRI="#urb_gw_cost_grow_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Urban</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasParamName"/>
@@ -2197,6 +2465,11 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">0</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#hasParamClassification"/>
+        <NamedIndividual IRI="#urb_gw_pump_capacity_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Urban</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#hasParamName"/>
         <NamedIndividual IRI="#urb_gw_pump_capacity_p"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">urb_gw_pump_capacity_p</Literal>
@@ -2252,6 +2525,11 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">0</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#hasParamClassification"/>
+        <NamedIndividual IRI="#urb_price_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Urban</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#hasParamName"/>
         <NamedIndividual IRI="#urb_price_p"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">urb_price_p</Literal>
@@ -2305,6 +2583,11 @@
         <DataProperty IRI="#hasMinValue"/>
         <NamedIndividual IRI="#urb_use_p"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasParamClassification"/>
+        <NamedIndividual IRI="#urb_use_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Urban</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasParamName"/>
@@ -2380,6 +2663,11 @@
         <DataProperty IRI="#hasMinValue"/>
         <NamedIndividual IRI="#us_mx_1906_p"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasParamClassification"/>
+        <NamedIndividual IRI="#us_mx_1906_p"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Policies</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasParamName"/>
@@ -2522,8 +2810,8 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">The General Algebraic Modeling System (GAMS)</Literal>
     </DataPropertyAssertion>
     <InverseObjectProperties>
-        <ObjectProperty IRI="#runsA"/>
         <ObjectProperty IRI="#isSimulatedBy"/>
+        <ObjectProperty IRI="#runsA"/>
     </InverseObjectProperties>
     <FunctionalObjectProperty>
         <ObjectProperty IRI="#isMemberOf"/>
@@ -2687,6 +2975,9 @@
         <DataProperty IRI="#hasName"/>
     </FunctionalDataProperty>
     <FunctionalDataProperty>
+        <DataProperty IRI="#hasParamClassification"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
         <DataProperty IRI="#hasParamName"/>
     </FunctionalDataProperty>
     <FunctionalDataProperty>
@@ -2808,6 +3099,10 @@
     <DataPropertyDomain>
         <DataProperty IRI="#hasName"/>
         <Class IRI="#Person"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasParamClassification"/>
+        <Class IRI="#Parameter"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#hasParamName"/>
@@ -2943,6 +3238,10 @@
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#hasName"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasParamClassification"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
@@ -3038,9 +3337,39 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Reservoir evaporation (feet loss per exposed acre)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Input</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">This class defines the Input of the model.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Institution</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">this class define the Institution to which the Creators of the model belongs to.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#LANDRHS_p</IRI>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Land available by irrigation district</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Model</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">This class define the Water Model that is used to create the projection.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Output</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">This class define the Output of the model.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Parameter</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">This class defines the Parameters the model receives.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Person</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">This class defines a Person.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -3048,9 +3377,19 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Crop prices</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ProjectionData</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">This class define additional information the model requires.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Q_v</IRI>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Aquifer Storage Volume</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Simulation_software</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">This class defines the software that is used to simulate the projection using the Water Model.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -3088,9 +3427,209 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Terminal sustainability proportion of starting ground water storage</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasCity</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The Institution city&apos;s name</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasClimateSelection</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The climate selection the user selected</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasCountry</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The Institution country&apos;s name</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasDataType</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The parameter data type</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasDefaultSource</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The parameter&apos;s value default source</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasDefaultValue</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The parameter&apos;s default value</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasDefinitionType</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The parameter&apos;s definition type</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasDepartment</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The Institution&apos;s department</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasDescription</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The parameter&apos;s description</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasEmail</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The email of the creator of the model</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasHumanIntervention</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The human intervention the user selected</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasInput</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A Model has input Input</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasInstitutionName</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The Institution&apos;s name</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasMaxValue</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The parameter&apos;s maximum value</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasMinValue</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The parameter&apos;s minimum value</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasModelCreator</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A Model has creator Person</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasModelDescription</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The model&apos;s description</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasModelID</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The model&apos;s ID</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasModelLicense</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The model&apos;s license</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasModelName</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The model&apos;s name</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasModelSponsor</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The model&apos;s sponsor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasModelVersion</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The model&apos;s version</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasName</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The name of the creator of the model</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasOutput</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A Model has output Output</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasParamClassification</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A Parameter has a type of classification (Urban, Agriculture, Storage and Policies)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasParamName</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The parameter&apos;s name</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasState</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The Institution&apos;s state</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasStructDimension</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The parameter&apos;s struct dimension</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasStructType</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The parameter&apos;s struct type</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasSwName</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The name of the software</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasSwVersion</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The version of the software</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasUnit</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The paramter&apos;s unit</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasValue</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The parameters value</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasVarName</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The variable&apos;s name</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasVarUnit</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The variable&apos;s unit</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasVarValue</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The variable&apos;s value</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isMemberOf</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A Person is member of Institution</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isSimulatedBy</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A Model is simulated by a Simulation Software</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#land_p</IRI>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Land in production in a base full supply year eg 2005</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#modelDateCreated</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The model&apos;s creation date</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#modelDateModified</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The model&apos;s last modification date</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -3116,6 +3655,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#rho_pop_p</IRI>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Population growth rate per year</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#runsA</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A Simulation Software runs a Model</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -3192,9 +3736,29 @@
         <IRI>#zmax_p</IRI>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Max project storage</Literal>
     </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/contributor"/>
+        <AbbreviatedIRI>owl:Thing</AbbreviatedIRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Gerardo Fang</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/contributor"/>
+        <AbbreviatedIRI>owl:Thing</AbbreviatedIRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Manoj Saha</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/contributor"/>
+        <AbbreviatedIRI>owl:Thing</AbbreviatedIRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Raul Alejandro Vargas Acosta</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <AbbreviatedIRI>owl:Thing</AbbreviatedIRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">This ontology describes the Input and Output of the Water Model that is used to make projections of water scarcity.</Literal>
+    </AnnotationAssertion>
 </Ontology>
 
 
 
-<!-- Generated by the OWL API (version 3.5.4) http://owlapi.sourceforge.net -->
+<!-- Generated by the OWL API (version 4.2.5.20160517-0735) https://github.com/owlcs/owlapi -->
 

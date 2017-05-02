@@ -16,6 +16,7 @@ public class Parameter {
 	String dataType;
 	String definitionType;
 	URI paramValue;
+	String paramClassification;
 	
 	public String toString(){
 		return getParamName().replaceAll(" ", "_");

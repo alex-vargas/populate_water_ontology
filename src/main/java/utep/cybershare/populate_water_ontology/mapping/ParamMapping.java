@@ -9,7 +9,7 @@ public final class ParamMapping {
 		paramMap = new HashMap<String, String>();
 
 		paramMap.put("paramName","hasParamName");
-//		paramMap.put("paramLabel","sdffdsdfsdfs");
+		paramMap.put("paramClassification","hasParamClassification");
 		paramMap.put("paramUnit","hasUnit");
 		paramMap.put("paramDefaultValue","hasDefaultValue");
 		paramMap.put("paramDefaultSource","hasDefaultSource");
