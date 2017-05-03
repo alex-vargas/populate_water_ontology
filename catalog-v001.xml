@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri id="Imports Wizard Entry" name="http://www.w3.org/ns/dcat" uri="https://www.w3.org/ns/dcat"/>
+    <uri id="Imports Wizard Entry" name="http://www.w3.org/ns/dcat" uri="https://www.w3.org/ns/dcat.rdf"/>
     <uri id="Imports Wizard Entry" name="http://www.w3.org/ns/prov-o-20130430" uri="https://www.w3.org/ns/prov-o"/>
     <uri id="Imports Wizard Entry" name="http://semanticscience.org/ontology/sio/v1.36.0/sio-release.owl" uri="http://semanticscience.org/ontology/sio.owl"/>
     <uri id="Imports Wizard Entry" name="http://semanticscience.org/ontology/sio/v1.36.0/sio-release.owl" uri="https://raw.githubusercontent.com/micheldumontier/semanticscience/master/ontology/sio/release/sio-release.owl"/>
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1493693797024" name="http://www.semanticweb.org/FMA/water_model" uri="water_model_populated.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1493832435252" name="http://ontology.cybershare.utep.edu/fma/watermodelgams" uri="water_model_populated.owl"/>
     </group>
 </catalog>

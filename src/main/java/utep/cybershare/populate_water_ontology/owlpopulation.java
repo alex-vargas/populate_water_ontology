@@ -53,7 +53,7 @@ public class owlpopulation {
 	public owlpopulation() throws OWLOntologyCreationException {
 		ontFile = "water_model_populated.owl";
 		ontSchemaPath = "C:\\Users\\aleja\\Dropbox\\Info\\PhD\\UTEP\\Cyberinfrastructure applications\\Project2\\water_model.owl";
-		ontIRI = "http://www.semanticweb.org/FMA/water_model#";
+		ontIRI = "http://ontology.cybershare.utep.edu/fma/watermodelgams#";
 		mManager = OWLManager.createOWLOntologyManager();
 		mFactory = mManager.getOWLDataFactory();
 		

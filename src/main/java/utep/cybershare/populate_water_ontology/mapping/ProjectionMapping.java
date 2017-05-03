@@ -9,8 +9,8 @@ public class ProjectionMapping {
 	public ProjectionMapping(){
 		proMap = new HashMap<String, String>();
 
-		proMap.put("climate_selection","hasClimateSelection");
-		proMap.put("human_intervention","hasHumanIntervention");
+		proMap.put("name","hasProjectionDataName");
+		proMap.put("value","hasProjectionDataValue");
 	}
 	public Map<String, String> getProMap() {
 		return proMap;
